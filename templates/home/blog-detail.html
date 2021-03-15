@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- .....................................Campaign.......................................... -->
+    <section class="blog-container" style="margin-top: 1rem">
+        <div>
+            <ul class="header_ul" id="header_ul">
+                <li>
+                    <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+                </li>
+                <li>
+                    <a title="Bloq" href="{% url 'blog' %}"> &gt;Bloq</a>
+                </li>
+                <li>
+                    <a title="Blogun adi" href=""> &gt;Blogun adi</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row blog-header mb-2" style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+            <div class="blog_output_title"
+                style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
+                {{blog.title}}</div>
+        </div>
+
+        <div class="row m-0 p-0">
+            <div class="col-12 m-0 p-0">
+                <div class="for-blog-main-img">
+                    <img class="w-100 h-100" src="{{ blog.image.url }}" alt="">
+                </div>
+            </div>
+            <div class="col-12 d-flex p-0 blog-detail-info flex-wrap">
+            <div class="col-12 blog-detail-part p-0 mb-3 d-flex flex-wrap">
+            <div class="col-lg-6 col-12">
+                <div class="for-blog-img">
+                    <img class="w-100 h-100" src="{% static 'assets/images/mixer.jpeg'%}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="for-blog-text mt-3 mt-lg-0">
+                    <h1>Lorem ipsum dolor sit</h1>
+                    <p class="m-0 p-0"> Stasionar mikserin üç fərqli başlığı ilə müxtəlif təamlar hazırlayaraq süfrənizi
+                        bəzəyə bilərsiniz. Bu başlıqlar polietilendən və alüminiumdan ibarətdir. KitchenAid stasionar
+                        mikserin mövcud olan 3 fərqli başlığı davamlılıq baxımından çox yaxşıdır. Başlıqlar çox rahat
+                        şəkildə taxılıb çıxarılır. 3 başlığın hər birinin ayrı funksiyası var. Videoda hər birindən bəhs
+                        edilir. 3.3 lt həcmində olan kasanın dərinliyi də kənara daşma, sıçrama ehtimalının qarşısını
+                        alır. Kasa metaldan ibarətdir. KitchenAid mikserinin özü isə tökmə metaldandır. Mikserin
+                        ağırlığı 6.5 kq.-dır. Bu tip maşınlarda ağırlıq önəmlidir. Çəkinin çoxluğu aparatın masada
+                        stabil qalmasına kömək edir..
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 blog-detail-part p-0 mb-3 d-flex flex-wrap">
+                <div class="col-lg-6 col-12">
+                    <div class="for-blog-img">
+                        <img class="w-100 h-100" src="{% static 'assets/images/mixer.jpeg'%}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="for-blog-text mt-3 mt-lg-0">
+                        <h1>Lorem ipsum dolor sit</h1>
+                        <p class="m-0 p-0"> Stasionar mikserin üç fərqli başlığı ilə müxtəlif təamlar hazırlayaraq süfrənizi
+                            bəzəyə bilərsiniz. Bu başlıqlar polietilendən və alüminiumdan ibarətdir. KitchenAid stasionar
+                            mikserin mövcud olan 3 fərqli başlığı davamlılıq baxımından çox yaxşıdır. Başlıqlar çox rahat
+                            şəkildə taxılıb çıxarılır. 3 başlığın hər birinin ayrı funksiyası var. Videoda hər birindən bəhs
+                            edilir. 3.3 lt həcmində olan kasanın dərinliyi də kənara daşma, sıçrama ehtimalının qarşısını
+                            alır. Kasa metaldan ibarətdir. KitchenAid mikserinin özü isə tökmə metaldandır. Mikserin
+                            ağırlığı 6.5 kq.-dır. Bu tip maşınlarda ağırlıq önəmlidir. Çəkinin çoxluğu aparatın masada
+                            stabil qalmasına kömək edir..
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 blog-detail-part p-0 mb-3 d-flex flex-wrap">
+                    <div class="col-lg-6 col-12">
+                        <div class="for-blog-img">
+                            <img class="w-100 h-100" src="{% static 'assets/images/mixer.jpeg'%}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="for-blog-text mt-3 mt-lg-0">
+                            <h1>Lorem ipsum dolor sit</h1>
+                            <p class="m-0 p-0"> Stasionar mikserin üç fərqli başlığı ilə müxtəlif təamlar hazırlayaraq süfrənizi
+                                bəzəyə bilərsiniz. Bu başlıqlar polietilendən və alüminiumdan ibarətdir. KitchenAid stasionar
+                                mikserin mövcud olan 3 fərqli başlığı davamlılıq baxımından çox yaxşıdır. Başlıqlar çox rahat
+                                şəkildə taxılıb çıxarılır. 3 başlığın hər birinin ayrı funksiyası var. Videoda hər birindən bəhs
+                                edilir. 3.3 lt həcmində olan kasanın dərinliyi də kənara daşma, sıçrama ehtimalının qarşısını
+                                alır. Kasa metaldan ibarətdir. KitchenAid mikserinin özü isə tökmə metaldandır. Mikserin
+                                ağırlığı 6.5 kq.-dır. Bu tip maşınlarda ağırlıq önəmlidir. Çəkinin çoxluğu aparatın masada
+                                stabil qalmasına kömək edir..
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 blog-detail-part p-0 mb-3 d-flex flex-wrap">
+                        <div class="col-lg-6 col-12">
+                            <div class="for-blog-img">
+                                <img class="w-100 h-100" src="{% static 'assets/images/mixer.jpeg'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="for-blog-text mt-3 mt-lg-0">
+                                <h1>Lorem ipsum dolor sit</h1>
+                                <p class="m-0 p-0"> Stasionar mikserin üç fərqli başlığı ilə müxtəlif təamlar hazırlayaraq süfrənizi
+                                    bəzəyə bilərsiniz. Bu başlıqlar polietilendən və alüminiumdan ibarətdir. KitchenAid stasionar
+                                    mikserin mövcud olan 3 fərqli başlığı davamlılıq baxımından çox yaxşıdır. Başlıqlar çox rahat
+                                    şəkildə taxılıb çıxarılır. 3 başlığın hər birinin ayrı funksiyası var. Videoda hər birindən bəhs
+                                    edilir. 3.3 lt həcmində olan kasanın dərinliyi də kənara daşma, sıçrama ehtimalının qarşısını
+                                    alır. Kasa metaldan ibarətdir. KitchenAid mikserinin özü isə tökmə metaldandır. Mikserin
+                                    ağırlığı 6.5 kq.-dır. Bu tip maşınlarda ağırlıq önəmlidir. Çəkinin çoxluğu aparatın masada
+                                    stabil qalmasına kömək edir..
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+            
+        </div>
+            
+            
+        </div>
+
+
+
+
+    </section>
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <section id="carousel">
+    
+    
+        <div id="owl-carousel-first" class="owl-carousel-all owl-carousel owl-theme">
+            <div class="item">
+                <div class="position-relative">
+                    <img src="{% static 'assets/images/pngtree-nordic-minimalist-furniture-banner-design-image_190039.jpeg'%}"
+                        alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div class="position-relative">
+                    <img src="{% static 'assets/images/pngtree-nordic-minimalist-furniture-banner-design-image_190039.jpeg'%}"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- .....................................Campaign.......................................... -->
+    <section class="blog-container" style="margin-top: 1rem">
+    <div>
+        <ul class="header_ul" id="header_ul">
+            <li>
+                <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+            </li>
+            <li>
+                <a title="Bloq" href=""> &gt;Bloq</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="row blog-header mb-2" style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+        <div class="blog_output_title" style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">Bloq</div>
+    </div>
+
+    {% for blog in blogs %}
+
+    <div class="row">
+            <div class="col-12">
+                <div class="for-shadow-blog d-flex">
+                <div class="blog-images">
+                    <img class="h-100 w-100" src="{{ blog.image.url }}" alt="">
+                </div>
+                <div class="blog-text">
+                <div class="blog-name"><h1>{{blog.title}}</h1></div>
+                <div class="blog-content">{{blog.content}}</div>
+                <div class="blog-footer">
+                        <div class="blog-detailly">
+                                <a href="{% url 'blog_detail' blog.pk %}">Ətraflı <i class="fa fa-caret-right ml-1"></i> </a>
+                            </div>
+                        
+                </div>
+            </div>
+        </div>  
+                
+            </div>
+        </div>
+        {% endfor %}
+
+    
+
+</section>
+
+
+<!-- ..................................pagination...................................... -->
+<div class="mb-2 pagination_wrapper">
+        <ul class="pagination_ul">
+
+            <li class="active_page">
+                <a href="javascript:void(0);">
+                    1
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    2
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    3
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    4
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    5
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+{% endblock %}

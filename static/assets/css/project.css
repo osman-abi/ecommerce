@@ -1,0 +1,139 @@
+.project-container{
+    margin: auto;
+}
+
+.project-container .header_ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    }
+
+.project-container .header_ul li{
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin-right: 5px;
+    }
+
+.project-container .header_ul li:last-of-type{
+    margin-right: 0px !important;
+    }
+
+.project-container .header_ul li a {
+    font-family: MavenPro-Regular;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.03px;
+    color: #40484e;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.project-header{
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+        margin-bottom: auto;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.project-header .project_output_title{
+    float: left;
+    width: 100%;
+    font-family: MavenPro-Regular;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #40484e;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.project-container .header_ul li:last-of-type a{
+    font-family: MavenPro-Bold
+    }
+
+.project-name h1{
+    font-family: MavenPro-SemiBold;
+    font-size: 26px;
+}
+
+.project-name{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.project-footer{
+    margin-top: 10px;
+    align-items: center;
+    padding: 0px 15px;
+    margin-bottom: 10px;
+}
+
+.project-detailly a{
+    font-family: MavenPro-SemiBold;
+    font-size: 14px;
+    color: #333 !important;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.project-detailly{
+    display: flex;
+    justify-content: end;
+}
+
+.for-shadow-project{
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.176);
+    border-radius: 20px;
+    padding-bottom: 1px;
+    margin-bottom: 20px;
+}
+
+.project-images img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@media screen and (min-width: 1121px) {
+    .project-container{
+    width: 1120px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .project-container{
+      margin-left: 15px;
+      margin-right: 15px;
+
+    }    
+}
+@media screen and (max-width: 1079px) {
+    .project-name h1{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .project-container .header_ul li a{
+        font-size: 11px;
+        white-space: nowrap;
+    }
+}

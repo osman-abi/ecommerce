@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- ........................................................banner........................................... -->
+    <section>
+        <div class="personal-page-banner">
+            <img src="{% static 'assets/images/pngtree-nordic-minimalist-furniture-banner-design-image_190039.jpeg'%}" alt="">
+        </div>
+    </section>
+
+    <!-- .....................................Question-Answers.......................................... -->
+    <section class="personal-page-container" style="margin-top: 1rem">
+        <div>
+            <ul class="header_ul" id="header_ul">
+                <li>
+                    <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+                </li>
+                <li>
+                    <a title="Şəxsi hesabım" href=""> &gt;Şəxsi hesabım</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row personal-page-header mb-2"
+            style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+            <div class="personal-page_output_title"
+                style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
+                Şəxsi hesabım</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-12">
+                <div class="position-relative shadow-personal-page">
+                    <h3>Samir Sardarli</h3>
+                    <a href="">Çıxış <i class="fa fa-caret-right ml-1"></i> </a>
+                </div>
+            </div>
+            <div class="col-md-9 col-12 ">
+                <div class="col-12 d-flex shadow-personal-page-right flex-wrap">
+                    <div class="col-12 mb-3 favouritee">Daha öncə sifariş etdiklərim</div>
+                    <div class="col-12 p-0 d-flex flex-wrap favourite-items">
+                        <div class="col-4 mb-2 favourite-item">
+                            <a href="">
+                                <img class="w-100 h-100" src="{% static 'assets/images/Untitled-1(3).jpeg'%}" alt="">
+                            </a>
+                        </div>
+                        <div class="col-4 mb-2 favourite-item">
+                            <a href="">
+                                <img class="w-100 h-100" src="{% static 'assets/images/Untitled-1(3).jpeg'%}" alt="">
+                            </a>
+                        </div>
+                        <div class="col-4 mb-2 favourite-item">
+                            <a href="">
+                                <img class="w-100 h-100" src="{% static 'assets/images/Untitled-1(3).jpeg'%}" alt="">
+                            </a>
+                        </div>
+                        <div class="col-4 mb-2 favourite-item">
+                            <a href="">
+                                <img class="w-100 h-100" src="{% static 'assets/images/Untitled-1(3).jpeg'%}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}

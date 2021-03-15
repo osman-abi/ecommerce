@@ -1,0 +1,670 @@
+:::::::::::::::::::::::::: BACKEND ::::::::::::::::::::::::::
+
+:: Google Analytics və Yandex Metrikanın qoşulması
+:: Onlayn ödəniş + BirKart-ın qoşulması
+
+
+:: Add to wishlist +++++++
+:: Add to compare products ++++++
+:: Search functionality by AJAX
+:: Shexsi hesab -> indiye kimi qebul etdiyim sifarishler
+:: MPTT tags
+:: product detail sehifesinde wekillerin slide axiwi
+                :: FILTER functionality ::
+
+ Rəng:
+    • Ağ
+    • Ağ parlaq
+    • Qara
+    • Qara parlaq
+    • Ceviz
+    • Hareli Ceviz
+    • Krem
+    • Krem parlaq
+    • Açıq Hareli Ceviz
+    • Qırmızı
+    • Vaton
+    • Metalik İnci
+    • Antrasit
+    • Siyah parlaq
+    • Antik Dark
+    • Canyon Monument
+    • Viktoriya Ceviz
+    • Sacramento
+    • Baltimore Ceviz
+    • Oak Canyon Monument
+    • Alper
+    • Wotan
+    • Bəyaz Meşə
+    • Ay Taşı Qloss
+    • Liqna Platin
+    • Navarra
+    • Oak Bonifacio
+    • Portağal
+    • Sini Gloss
+    • Çim yaşıl
+    • Tünd Meşə
+    • Napaleon
+    • Krem Raffia
+    • Kampala Venge
+    • Sumella
+    • Mavi
+    • Belly
+    • Açıq Orex
+    • Brown raffia
+    • Coppucino Gloss
+    • Sarı
+    • Kalmar Ağça
+    • Vizion Kumaş
+    • Pəmbə
+    • Meşə
+    • Açıq Ağçaağac
+    • Cekson
+    • Oak Sonomo Light
+
+
+
+
+Məhsulun xüsusiyyətləri:
+    • Güzgülü
+    • Bazalı
+    • Ayaqlı
+    • Siyirməli
+
+
+
+İstehsalçı ölkə:
+    • Azərbaycan
+    • Russiya
+    • Çin
+    • Türkiyə
+    • Ukrayna
+
+Brend:
+    • Ehome
+    • Greenwood
+    • Foriella
+    • Filiz Mobilya
+    • Gümüş Mobilya
+
+
+Material: 
+    • LDSP
+    • MDF
+    • Akril
+    • Membran
+    • Plastik
+    • Metal
+    • Mərmər
+    • Şpon
+    • Massif
+    • Verzalit
+    • Şüşə
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+                        <li class="main_category_list">
+                            <a href=" " class="main_category_name" title="Mətbəx mebeli">Mətbəx
+                                mebeli
+                            </a>
+                            <div class="main_category_inner">
+                                <div class="main_category_inner_container">
+                                    <div class="subcategories_column two_column_list none_border">
+                                        <ul class="subcategories_list">
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Modern mətbəx mebelləri">Modern
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Klassik mətbəx mebelləri">Klassik
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Neoklassik mətbəx mebelləri">Neoklassik mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Mətbəx dolabları">Mətbəx
+                                                    dolabları</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div class="subcategories_column two_column_img first_img_column">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Çox Satılan Stollar</p>
+                                                    <p class="column_cta">Alışverişə Başla &gt;</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="subcategories_column two_column_img ">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Ehome Özəl Mətbəx Mebelləri</p>
+                                                    <p class="column_cta">İndi Bax &gt; </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="main_category_list">
+                            <a href=" " class="main_category_name" title="Mətbəx mebeli">Mətbəx
+                                mebeli
+                            </a>
+                            <div class="main_category_inner">
+                                <div class="main_category_inner_container">
+                                    <div class="subcategories_column two_column_list none_border">
+                                        <ul class="subcategories_list">
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Modern mətbəx mebelləri">Modern
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Klassik mətbəx mebelləri">Klassik
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Neoklassik mətbəx mebelləri">Neoklassik mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Mətbəx dolabları">Mətbəx
+                                                    dolabları</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div class="subcategories_column two_column_img first_img_column">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Çox Satılan Stollar</p>
+                                                    <p class="column_cta">Alışverişə Başla &gt;</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="subcategories_column two_column_img ">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Ehome Özəl Mətbəx Mebelləri</p>
+                                                    <p class="column_cta">İndi Bax &gt; </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="main_category_list">
+                            <a href=" " class="main_category_name" title="Mətbəx mebeli">Mətbəx
+                                mebeli
+                            </a>
+                            <div class="main_category_inner">
+                                <div class="main_category_inner_container">
+                                    <div class="subcategories_column two_column_list none_border">
+                                        <ul class="subcategories_list">
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Modern mətbəx mebelləri">Modern
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Klassik mətbəx mebelləri">Klassik
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Neoklassik mətbəx mebelləri">Neoklassik mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Mətbəx dolabları">Mətbəx
+                                                    dolabları</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div class="subcategories_column two_column_img first_img_column">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Çox Satılan Stollar</p>
+                                                    <p class="column_cta">Alışverişə Başla &gt;</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="subcategories_column two_column_img ">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Ehome Özəl Mətbəx Mebelləri</p>
+                                                    <p class="column_cta">İndi Bax &gt; </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="main_category_list">
+                            <a href=" " class="main_category_name" title="Mətbəx mebeli">Mətbəx
+                                mebeli
+                            </a>
+                            <div class="main_category_inner">
+                                <div class="main_category_inner_container">
+                                    <div class="subcategories_column two_column_list none_border">
+                                        <ul class="subcategories_list">
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Modern mətbəx mebelləri">Modern
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Klassik mətbəx mebelləri">Klassik
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Neoklassik mətbəx mebelləri">Neoklassik mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Mətbəx dolabları">Mətbəx
+                                                    dolabları</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div class="subcategories_column two_column_img first_img_column">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Çox Satılan Stollar</p>
+                                                    <p class="column_cta">Alışverişə Başla &gt;</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="subcategories_column two_column_img ">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Ehome Özəl Mətbəx Mebelləri</p>
+                                                    <p class="column_cta">İndi Bax &gt; </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="main_category_list">
+                            <a href=" " class="main_category_name" title="Mətbəx mebeli">Mətbəx
+                                mebeli
+                            </a>
+                            <div class="main_category_inner">
+                                <div class="main_category_inner_container">
+                                    <div class="subcategories_column two_column_list none_border">
+                                        <ul class="subcategories_list">
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Modern mətbəx mebelləri">Modern
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Klassik mətbəx mebelləri">Klassik
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Neoklassik mətbəx mebelləri">Neoklassik mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Mətbəx dolabları">Mətbəx
+                                                    dolabları</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div class="subcategories_column two_column_img first_img_column">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Çox Satılan Stollar</p>
+                                                    <p class="column_cta">Alışverişə Başla &gt;</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="subcategories_column two_column_img ">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Ehome Özəl Mətbəx Mebelləri</p>
+                                                    <p class="column_cta">İndi Bax &gt; </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="main_category_list">
+                            <a href=" " class="main_category_name" title="Mətbəx mebeli">Mətbəx
+                                mebeli
+                            </a>
+                            <div class="main_category_inner">
+                                <div class="main_category_inner_container">
+                                    <div class="subcategories_column two_column_list none_border">
+                                        <ul class="subcategories_list">
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Modern mətbəx mebelləri">Modern
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Klassik mətbəx mebelləri">Klassik
+                                                    mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Neoklassik mətbəx mebelləri">Neoklassik mətbəx mebelləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Mətbəx dolabları">Mətbəx
+                                                    dolabları</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div class="subcategories_column two_column_img first_img_column">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Çox Satılan Stollar</p>
+                                                    <p class="column_cta">Alışverişə Başla &gt;</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="subcategories_column two_column_img ">
+                                            <a href=" " class="img_column_inner">
+                                                <img src="{% static 'assets/images/Untitled-1(3).jpeg'%}"
+                                                    class="lazy-header" data-original="" style="display: inline;"
+                                                    width="390" height="225">
+                                                <div class="img_column_cta_box">
+                                                    <p class="short_desc">Ehome Özəl Mətbəx Mebelləri</p>
+                                                    <p class="column_cta">İndi Bax &gt; </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+
+                        <li class="main_category_list">
+                            <a href=" " class="main_category_name" id="ehome_Other_Category"
+                                title="Diğer Kategoriler">...
+                            </a>
+                            <div class="main_category_inner ">
+                                <div class="main_category_inner_container subcategories">
+                                    <div class="subcategories_column three_column_list">
+                                        <ul class="subcategories_list">
+                                            <li class="head_category_li">
+                                                <a href=" " class="subcategory_name head_category"
+                                                    title="Ofis mebeli">Ofis
+                                                    mebeli</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Rəhbər dəstləri">Rəhbər
+                                                    dəstləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="İşçi masaları">İşçi
+                                                    masaları</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="İclas masaları">İclas
+                                                    masaları</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Şkaf sistemləri">Şkaf
+                                                    sistemləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Ofis üçün stellajlar">Ofis
+                                                    üçün
+                                                    stellajlar</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Ofis üçün divanlar">Ofis üçün
+                                                    divanlar</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="subcategories_column three_column_list">
+                                        <ul class="subcategories_list">
+                                            <li class="head_category_li">
+                                                <a href=" " class="subcategory_name head_category"
+                                                    title="Ofis mebeli">Ofis
+                                                    mebeli</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Rəhbər dəstləri">Rəhbər
+                                                    dəstləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="İşçi masaları">İşçi
+                                                    masaları</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="İclas masaları">İclas
+                                                    masaları</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Şkaf sistemləri">Şkaf
+                                                    sistemləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Ofis üçün stellajlar">Ofis
+                                                    üçün
+                                                    stellajlar</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Ofis üçün divanlar">Ofis üçün
+                                                    divanlar</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="subcategories_column three_column_list">
+                                        <ul class="subcategories_list">
+                                            <li class="head_category_li">
+                                                <a href=" " class="subcategory_name head_category"
+                                                    title="Ofis mebeli">Ofis
+                                                    mebeli</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Rəhbər dəstləri">Rəhbər
+                                                    dəstləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="İşçi masaları">İşçi
+                                                    masaları</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="İclas masaları">İclas
+                                                    masaları</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Şkaf sistemləri">Şkaf
+                                                    sistemləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Ofis üçün stellajlar">Ofis
+                                                    üçün
+                                                    stellajlar</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Ofis üçün divanlar">Ofis üçün
+                                                    divanlar</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="subcategories_column three_column_list">
+                                        <ul class="subcategories_list">
+                                            <li class="head_category_li">
+                                                <a href=" " class="subcategory_name head_category"
+                                                    title="Ofis mebeli">Ofis
+                                                    mebeli</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Rəhbər dəstləri">Rəhbər
+                                                    dəstləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="İşçi masaları">İşçi
+                                                    masaları</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="İclas masaları">İclas
+                                                    masaları</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Şkaf sistemləri">Şkaf
+                                                    sistemləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Ofis üçün stellajlar">Ofis
+                                                    üçün
+                                                    stellajlar</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Ofis üçün divanlar">Ofis üçün
+                                                    divanlar</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="subcategories_column three_column_list">
+                                        <ul class="subcategories_list">
+                                            <li class="head_category_li">
+                                                <a href=" " class="subcategory_name head_category"
+                                                    title="Ofis mebeli">Ofis
+                                                    mebeli</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Rəhbər dəstləri">Rəhbər
+                                                    dəstləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="İşçi masaları">İşçi
+                                                    masaları</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="İclas masaları">İclas
+                                                    masaları</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Şkaf sistemləri">Şkaf
+                                                    sistemləri</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Ofis üçün stellajlar">Ofis
+                                                    üçün
+                                                    stellajlar</a>
+                                            </li>
+                                            <li>
+                                                <a href=" " class="subcategory_name"
+                                                    title="Ofis üçün divanlar">Ofis üçün
+                                                    divanlar</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>

@@ -1,0 +1,161 @@
+.personal-page-banner img{
+    width: 100%;
+    height: 100%;
+  }
+
+.personal-page-container{
+    margin: auto;
+}
+
+.personal-page-container .header_ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    }
+
+.personal-page-container .header_ul li{
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin-right: 5px;
+    }
+
+.personal-page-container .header_ul li:last-of-type{
+    margin-right: 0px !important;
+    }
+
+.personal-page-container .header_ul li a {
+    font-family: MavenPro-Regular;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.03px;
+    color: #40484e;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.personal-page-header{
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+        margin-bottom: auto;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.personal-page-header .personal-page_output_title{
+    float: left;
+    width: 100%;
+    font-family: MavenPro-Regular;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #40484e;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.personal-page-container .header_ul li:last-of-type a{
+    font-family: MavenPro-Bold
+    }
+
+.shadow-personal-page{
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.176);
+    border-radius: 5px;
+    padding: 40px;
+}
+.shadow-personal-page a{
+    color: #333;
+    font-family: MavenPro-SemiBold;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.shadow-personal-page h3{
+    font-family: MavenPro-SemiBold;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+.shadow-personal-page-right{
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.176);
+    border-radius: 5px;
+    padding: 20px;
+}
+.favouritee{
+    font-family: MavenPro-SemiBold;
+    font-size: 20px;
+}
+
+    @media screen and (min-width: 1121px) {
+        .personal-page-container{
+        width: 1120px;
+        }
+    }
+    
+    @media screen and (max-width: 1120px) {
+        .personal-page-container{
+          margin-left: 15px;
+          margin-right: 15px;
+    
+        }    
+    }
+    @media screen and (max-width: 1079px) {
+        .shadow-personal-page h3{
+            font-size: 12px;
+        }
+        .favouritee{
+            font-size: 12px;
+        }
+        .shadow-personal-page a{
+           font-size: 11px;
+        }
+        
+    }
+    @media screen and (max-width: 767px) {
+        .shadow-personal-page h3{
+            font-size: 20px;
+        }
+        .favouritee{
+            font-size: 20px;
+        }
+        .shadow-personal-page a{
+           font-size: 16px;
+        }
+        .shadow-personal-page{
+            margin-bottom: 20px;
+        }
+        
+    }
+    
+    @media screen and (max-width: 720px) {
+        .personal-page-container .header_ul li a{
+            font-size: 11px;
+            white-space: nowrap;
+        }
+        .favourite-item{
+            flex: 50%;
+            max-width: 50%;
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+        .favouritee{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }

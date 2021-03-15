@@ -1,0 +1,1090 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="mebel,ev,ofis,çalışma,ev aksesuarı" />
+    <meta name="description"
+        content="Mebel dünyasına xoş gəlmişsiniz. İstədiyiniz mebel aksesuarını Ehome-da tapa bilərsiniz" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-grid.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-reboot.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-reboot.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/header.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/footer.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/about-us.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/blog-detail.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/blog.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/campaign-detail.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/campaign.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/career.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/catalog.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/category.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/device.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/fancybox.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/product-detail.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/guarantee.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/location.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/most-asked.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/page-credit.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/partner.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/payment-terms.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/personal-page.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/project-detail.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/project.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/service.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/right-line-side.css'%}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="{% static 'assets/js/font-awesome.js'%}"></script>
+    <title>Ehome Mebel Dünyası</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- .............................for desktop......................................... -->
+        <div class="desktop_layout_wrapper">
+            <div class="top_header_wrapper">
+                <div class="top_header_inner">
+                    <div class="top_header_inner_left">
+                        <ul>
+                            <li>
+                                <a href="{% url 'about' %}">Haqqımızda</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'location' %}">Ünvan</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'page_credit' %}">Kredit</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'payment_terms' %}">Ödəmə şərtləri</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top_header_inner_right">
+                        <ul>
+                            <li>
+                                <a href="{% url 'campaign' %}">
+                                    <span class="top_header_inner_right_icon"><i class='fas fa-bullhorn'></i></span>
+                                    <span class="top_header_inner_right_text">Kampaniyalar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog' %}">
+                                    <span class="top_header_inner_right_icon"><img
+                                            style="width: 23px;height: 23px;margin-right: 8px;"
+                                            src="{% static 'assets/images/001-writing.svg'%}" alt=""> </span>
+                                    <span class="top_header_inner_right_text">Blog</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'most_asked' %}">
+                                    <span class="top_header_inner_right_icon"><i class="fa fa-question"></i></span>
+                                    <span class="top_header_inner_right_text">Tez-Tez verilen suallar</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="middle_header_wrapper ">
+                <div class="middle_header_inner d-flex align-items-center justify-content-between">
+                    <a href="{% url 'home' %}"><img style="width: 140px;height: 55px;"
+                            src="{% static 'assets/images/main-logo.png'%}" alt=""></a>
+
+                    <div class="middle_header_inner_column middle_header_inner_search_wrapper">
+                        <form method="GET" action="{% url 'search_success' %}" class="main_header_search_form">
+                            
+
+                            <span class="twitter-typeahead" style="position: relative; display: inline-block;">
+                                <input
+                                    id="search-suggestion" name="q" type="text"
+                                    class="main_header_search_input typeahead search-suggestion-typeahead tt-input"
+                                    data-provider="typeahead" value="" placeholder="Evin üçün nə axtarırsan?"
+                                    autocomplete="off" spellcheck="false" dir="auto"
+                                    style="position: relative; vertical-align: top;">
+                                <pre aria-hidden="true"
+                                    style="position: absolute; visibility: hidden; white-space: pre; font-family: MavenPro-Regular; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0.7px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre>
+                                <div class="tt-menu"
+                                    style="position: absolute; top: 100%; left: 0px; z-index: 993; display: none;">
+                                    <div class="tt-dataset tt-dataset-categories"></div>
+                                    <div class="tt-dataset tt-dataset-products"></div>
+                                </div>
+                            </span>
+                            <button type="submit" class="main_header_search_btn"><i class="fa fa-search"></i></button>
+
+                        </form>
+                    </div>
+
+
+
+
+                    
+
+                    <div class="d-flex align-items-center">
+                        <img style="margin-right:5px;" width="30px" src="{% static 'assets/images/tel.png'%}" alt="">
+                        <div style="color: red;font-size: 12px;line-height:14px;margin-right:5px;position:relative">
+                            Çağrı
+                            <br> Mərkəzi
+                            <div
+                                style="position: absolute;white-space:nowrap;color:#71767b;font-size:9px;margin-top:3px;">
+                                Hər gün 09:00 - 21:00</div>
+                        </div>
+                        <a style="text-decoration:none" href="tel:+994-50-204-90-01">
+                            <div style="color: red;font-size:20px;margin-top:10px">050 204 90 01</div>
+                        </a>
+                    </div>
+
+
+                    <div class="middle_header_inner_column middle_header_inner_shortcuts_wrapper">
+                        <div class="shortcuts_list customer-group">
+                            <div class="shortcut_column membership_wrapper_notlogin headerLoginRegister"
+                                style="display: block;">
+                                <a data-toggle="modal" data-target="#exampleModal" style="text-decoration: none"
+                                    rel="nofollow" href="" class="shortcut_title d-flex align-items-center">
+                                    <i style="color: #71767b;font-size: 22px;margin-right: 8px;" class="fa fa-user"></i>
+                                    {% if user.is_authenticated %}
+                                    <a href="{% url 'logout' %}">
+                                    Cixis
+                                    </a>
+                                    {% else %}
+                                    <span class="shortcut_text">Giris</span>
+                                    {% endif %}
+                                </a>
+
+                            </div>
+                            <div class="shortcut_column my_favorites_wrapper my-favorites">
+                                <a style="text-decoration: none" rel="nofollow" href="javascript:void(0)"
+                                    class="shortcut_title my-favorites-container favorite-icon-header d-flex align-items-center">
+                                    <i style="color: #71767b;font-size: 22px;margin-right: 8px;"
+                                        class="fa fa-heart"></i>
+                                    <span class="shortcut_text">Seçilmişlər</span>
+                                </a>
+                            </div>
+                            <div class="shortcut_column basket_wrapper my-cart">
+                                <a style="text-decoration: none" href="javascript:void(0)"
+                                    class="shopping-icon-header shortcut_title d-flex align-items-center">
+                                    <i style="color: #71767b;font-size: 22px;margin-right: 8px;"
+                                        class="fa fa-shopping-cart"></i>
+                                    <span class="shortcut_text">Səbət</span>
+                                </a>
+                                <!-- <div class="shortcut_detail basket_detail">
+
+                                    <div class="empty_basket_text">Səbət Boşdur</div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        
+
+            
+            
+           
+
+            <div class="main_menu_wrapper">
+                <div class="main_menu_categories">
+                    {% load mptt_tags %}
+                    <ul class="main_menu_category_list_wrapper">
+                        
+                        {% recursetree category %}
+                        <li class="main_category_list">
+                            <a href="  {% url 'category_detail' node.id  node.slug %} " 
+                            class="main_category_name" title="Mətbəx mebeli">{{ node.name }} || {{ node.image }} </a>
+                            {% if not node.is_leaf_node %}
+                            <div class="main_category_inner">
+                                <div class="main_category_inner_container">
+                                    <div class="subcategories_column two_column_list none_border">
+                                        <ul class="children">
+                                            
+                                                <a href=" {% url 'category_detail' node.id  node.slug %} " class="subcategory_name"
+                                                    title="Modern mətbəx mebelləri"> {{ children }} </a>
+                                            
+                                           
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </li>
+                        {% endrecursetree %}
+
+
+                    </ul>
+                </div>
+                <div class="overlay_bg" style="height: unset;"></div>
+            </div>
+
+
+        </div>
+
+        <!-- ..............................................for mobile.................................................... -->
+        <div class="mobile_layout_wrapper">
+            <div class="top_header_wrapper">
+                <ul>
+                    <li class="">
+                        <a class="" href="{% url 'campaign' %}">
+                            <span class="top_header_inner_right_icon"><i class="fas fa-bullhorn"
+                                    aria-hidden="true"></i></span>
+                            <span class="top_header_inner_right_text">KAMPANİYALAR</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="" href="{% url 'blog' %}">
+                            <span class="top_header_inner_right_icon"><img
+                                    style="width: 16px;height: 16px;margin-right: 0px;"
+                                    src="{% static 'assets/images/001-writing.svg'%}" alt=""></span>
+                            <span class="top_header_inner_right_text">BLOG</span>
+                        </a>
+                    </li>
+
+                    <li class="ehome-asking-top">
+                        <a class="" href="{% url 'most_asked' %}">
+                            <span class="top_header_inner_right_icon"><i class="fa fa-question"
+                                    aria-hidden="true"></i></span>
+                            <span class="top_header_inner_right_text">TEZ-TEZ VERİLƏN SUALLAR</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main_header_wrapper">
+                <div class="main_header_inner">
+                    <div class="d-flex main_header_inner_column hamburder_menu_column">
+                        <div id="nav-icon" class="menu-button">
+                            <span class="burger-icon"></span>
+                        </div>
+                    </div>
+                    <div class="main_header_inner_column logo_column">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'assets/images/main-logo.png'%}" alt="">
+                        </a>
+                    </div>
+                    <div class="call-center-mobile d-flex align-items-center">
+                        <img class="img-call-center" style="margin-right:5px;width:30px !important"
+                            src="{% static 'assets/images/tel.png'%}" alt="" width="30px">
+                        <div class="for-mobile-call"
+                            style="color: red;font-size: 12px;line-height:14px;margin-right:5px;position:relative">
+                            Çağrı
+                            <br> Mərkəzi
+                            <div
+                                style="position: absolute;white-space:nowrap;color:#71767b;font-size:9px;margin-top:3px;">
+                                Hər gün 09:00 - 21:00</div>
+                        </div>
+                        <a style="text-decoration:none" href="tel:+994-50-204-90-01">
+                            <div class="number-company-mobile" style="color: red;font-size:18px;margin-top:10px">
+                                050 204 90 01
+                            </div>
+                        </a>
+
+                    </div>
+
+
+                    <div class="main_header_inner_column shortcut_icons_column">
+                        <ul>
+                            <li class="headerLoginRegisterMobile" style="display: block;">
+                                <a data-toggle="modal" data-target="#exampleModal" href="" id="custom-user-login"
+                                    class="membership_icon">
+                                    <i style="color: #71767b;font-size: 22px;margin-right: 8px;" class="fa fa-user"
+                                        aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="basket_icon my-cart-mobile"><i
+                                        style="color: #71767b;font-size: 22px;margin-right: 8px;"
+                                        class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="main_header_search_wrapper">
+                    <form action="" class="header_search_form">
+                        <span class="t-type" style="position: relative; display: inline-block;"><input
+                                id="search-suggestion-mobile" name="q" type="text"
+                                class="header_search_input typeahead search-suggestion-typeahead tt-input"
+                                data-provider="typeahead" value="" placeholder="Evin üçün nə axtarırsan?"
+                                autocomplete="off" spellcheck="false" dir="auto"
+                                style="position: relative; vertical-align: top;">
+                            <pre aria-hidden="true"
+                                style="position: absolute; visibility: hidden; white-space: pre; font-family: BrandonTextRegular; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 500; word-spacing: 0px; letter-spacing: 0.4px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;">k</pre>
+                            <div class="tt-menu tt-empty"
+                                style="position: absolute; top: 100%; left: 0px; z-index: 993; display: none;">
+                                <div class="tt-dataset tt-dataset-categories">kreslo</div>
+                                <div class="tt-dataset tt-dataset-products"></div>
+                            </div>
+                        </span>
+                        <button type="submit" class="header_search_btn"><i class="fa fa-search"
+                                aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="menu-content overlay close">
+
+                <nav class="menu">
+                    <ul class="to-left-ul">
+                        <li class="menu__item only_link">
+                            <a class="menu__link" href="{% url 'about' %}">
+                                <span class="top_header_inner_right_icon"><i class="fa fa-info-circle"></i></span>
+                                <span class="top_header_inner_right_text">Haqqimizda</span>
+                            </a>
+                        </li>
+                        <li class="menu__item only_link">
+                            <a class="menu__link" href="{% url 'location' %}">
+                                <span class="top_header_inner_right_icon"><i class="fa fa-map-marker"></i></span>
+                                <span class="top_header_inner_right_text">Ünvan</span>
+                            </a>
+                        </li>
+                        <li class="menu__item only_link">
+                            <a class="menu__link" href="{% url 'page_credit' %}">
+                                <span class="top_header_inner_right_icon"><i class="fa fa-credit-card"></i></span>
+                                <span class="top_header_inner_right_text">Kredit</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__item only_link">
+                            <a class="menu__link" href="{% url 'payment_terms' %}">
+                                <span class="top_header_inner_right_icon"> <img
+                                        src="{% static 'assets/images/payment-method.svg'%}"
+                                        style="height:14px;width:unset" alt=""> </span>
+                                <span class="top_header_inner_right_text">Ödəmə Şərtləri</span>
+                            </a>
+                        </li>
+
+                        <li class="menu__item only_link ehome-asking-menu">
+                            <a class="menu__link" href="{% url 'most_asked' %}">
+                                <span class="top_header_inner_right_icon"><i class="fa fa-question"
+                                        aria-hidden="true"></i></span>
+                                <span class="top_header_inner_right_text">TEZ-TEZ VERİLƏN SUALLAR</span>
+                            </a>
+                        </li>
+
+
+
+
+
+                        <li class="menu__item to-left">
+                            <a href=" " class="menu__link" title="OTURMA ODASI">MƏTBƏX MEBELİ<span
+                                    class="arrow"><i class="fa fa-plus for-icon-style"></i></span></a>
+                            <ul class="menu__sub-menu">
+                                <li class="menu__sub-menu__item">
+                                    <a href=" " class="menu__sub-menu__link child_category"
+                                        title="KOLTUK TAKIMI">Modern
+                                        mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href=" " class="menu__sub-menu__link child_category"
+                                        title="KOLTUK TAKIMI">Klassik
+                                        mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href=" " class="menu__sub-menu__link child_category"
+                                        title="KOLTUK TAKIMI">Neoklassik mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href=" " class="menu__sub-menu__link child_category"
+                                        title="KOLTUK TAKIMI">Mətbəx
+                                        dolabları</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="menu__item to-left">
+                            <a href=" " class="menu__link" title="OTURMA ODASI">MƏTBƏX MEBELİ<span
+                                    class="arrow"><i class="fa fa-plus for-icon-style"></i></span></a>
+                            <ul class="menu__sub-menu">
+                                <li class="menu__sub-menu__item">
+                                    <a href=" " class="menu__sub-menu__link child_category"
+                                        title="KOLTUK TAKIMI">Modern
+                                        mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href=" " class="menu__sub-menu__link child_category"
+                                        title="KOLTUK TAKIMI">Klassik
+                                        mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category"
+                                        title="KOLTUK TAKIMI">Neoklassik mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category" title="KOLTUK TAKIMI">Mətbəx
+                                        dolabları</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="menu__item to-left">
+                            <a href="" class="menu__link" title="OTURMA ODASI">MƏTBƏX MEBELİ<span class="arrow"><i
+                                        class="fa fa-plus for-icon-style"></i></span></a>
+                            <ul class="menu__sub-menu">
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category" title="KOLTUK TAKIMI">Modern
+                                        mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category" title="KOLTUK TAKIMI">Klassik
+                                        mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category"
+                                        title="KOLTUK TAKIMI">Neoklassik mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category" title="KOLTUK TAKIMI">Mətbəx
+                                        dolabları</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="menu__item to-left">
+                            <a href="" class="menu__link" title="OTURMA ODASI">MƏTBƏX MEBELİ<span class="arrow"><i
+                                        class="fa fa-plus for-icon-style"></i></span></a>
+                            <ul class="menu__sub-menu">
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category" title="KOLTUK TAKIMI">Modern
+                                        mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category" title="KOLTUK TAKIMI">Klassik
+                                        mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category"
+                                        title="KOLTUK TAKIMI">Neoklassik mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category" title="KOLTUK TAKIMI">Mətbəx
+                                        dolabları</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="menu__item to-left">
+                            <a href="" class="menu__link" title="OTURMA ODASI">MƏTBƏX MEBELİ<span class="arrow"><i
+                                        class="fa fa-plus for-icon-style"></i></span></a>
+                            <ul class="menu__sub-menu">
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category" title="KOLTUK TAKIMI">Modern
+                                        mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category" title="KOLTUK TAKIMI">Klassik
+                                        mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category"
+                                        title="KOLTUK TAKIMI">Neoklassik mətbəx mebelleri</a>
+                                </li>
+                                <li class="menu__sub-menu__item">
+                                    <a href="" class="menu__sub-menu__link child_category" title="KOLTUK TAKIMI">Mətbəx
+                                        dolabları</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </nav>
+                <div style="background: white;height:200px"></div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class=" modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-view" role="document">
+                <div class="modal-content">
+                    <div class="row align-items-center text-center flex-column">
+
+                        <div class="modal-body">
+                            <h3 class="welcome  text-center SignInOutFormstyle__Heading-w9z0ip-4 dUkJlM">
+                                Xoş Gəldiniz
+                            </h3>
+                            <h3 class="signup2  text-center SignInOutFormstyle__Heading-w9z0ip-4 dUkJlM"
+                                style="display: none;">Qeydiyyat</h3>
+                            <p class=" text-secondary">Istifadeci adi və şifrə ilə daxil olun</p>
+                        </div>
+                        <form method="POST" action="{% url 'login_user' %}" id="form-join">
+                            {% csrf_token %}
+                            <div class="form-data"
+                                style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                                <input class="mb-2 joinj form-control" name="username" type="text" placeholder="Istifadeci adi">
+                            </div>
+
+                            <div class="form-data"
+                                style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                                <input class="mb-2 joinj form-control" name="password" type="password" id=""
+                                    placeholder="Şifrə">
+                            </div>
+
+
+
+                            <input type="submit" class=" jbutton" value="Daxil ol">
+                        </form>
+
+                        <form method="POST" action="{% url 'register' %}" id="form-join2" style="display: none">
+                            {% csrf_token %}
+                            <div class="form-data"
+                                style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                                <input class="mb-2 joinj form-control" name="username" type="text" placeholder="Ad">
+                            </div>
+                            <div class="form-data"
+                                style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                                <input class="mb-2 joinj form-control" name="last_name" type="text"
+                                    placeholder="Soyad">
+                            </div>
+                            <div class="form-data">
+                                <div
+                                    style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                                    <input class="mb-2 joinj form-control" name="email" type="text"
+                                        placeholder="E-poçt">
+                                </div>
+                            </div>
+                            <div class="form-data"
+                                style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                                <input class="mb-2 joinj form-control" name="phone_number" type="text"
+                                    placeholder="Nömrə">
+                            </div>
+
+                            <div class="form-data"
+                                style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                                <input class="mb-2 joinj form-control" name="password" type="password" id=""
+                                    placeholder="Şifrə">
+                            </div>
+
+
+                            <input type="submit" class=" jbutton" value="Davam edin">
+                        </form>
+
+                        <p class="font-weight-bold class-link-join"><span class="q1-modal">Hesabınız yoxdur?</span>
+                            <span class="q2-modal" style="display: none">Hesabınız var?</span> <a class="linkjoin"
+                                href="">Qeydiyyat</a>
+                        </p>
+                        <p class=" font-weight-bold reset-modal">Şifrəni unudubsunuz? <a class="joinfooter"
+                                href="">Yenilə</a></p>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="right-side-line">
+        <div class="line-side line-side-closee d-flex">
+            <div class="nav flex-column icon-items nav-pills" id="v-pills-tab" role="tablist"
+                aria-orientation="vertical">
+                <a class="nav-link active right-side-opener" id="v-pills-heart-tab" data-toggle="pill"
+                    href="#v-pills-heart" role="tab" aria-controls="v-pills-heart" aria-selected="true">
+                    <i style="color: white" class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="parent-count-item"><span class="count-itemm">{{ cart_items_count }}</span></span>
+
+                </a>
+                <a class="nav-link right-side-opener" id="v-pills-favorite-tab" data-toggle="pill"
+                    href="#v-pills-favorite" role="tab" aria-controls="v-pills-favorite" aria-selected="false">
+                    <i style="color: white" class="fa fa-heart" aria-hidden="true"></i>
+                    <span class="parent-count-item"><span class="count-itemm">{{ favourite_items_count }}</span></span>
+                </a>
+                <a class="nav-link right-side-opener" id="v-pills-compare-tab" data-toggle="pill"
+                    href="#v-pills-compare" role="tab" aria-controls="v-pills-compare" aria-selected="false">
+                    <i style="color: white" class="fas fa-balance-scale-right" aria-hidden="true"></i>
+                    <span class="parent-count-item"><span class="count-itemm">0</span></span>
+                </a>
+                <a data-toggle="modal" data-target="#callModal" class="nav-link" id="v-pills-call-tab"
+                    data-toggle="pill" href="javascript:void(0)" role="tab" aria-controls="v-pills-call"
+                    aria-selected="false">
+                    <i style="color: white" class="fas fa-phone-alt" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="w-100 tab-content content-right-side-line" id="v-pills-tabContent">
+                <div class="w-100 h-100 tab-pane fade show active" id="v-pills-heart" role="tabpanel"
+                    aria-labelledby="v-pills-heart-tab">
+                    <div class="w-100 rigth-side-item-name position-relative">
+                        <span>Səbət</span>
+                        <div class="exit-svg-right-side">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="16" height="16" viewBox="0 0 16 16">
+                                <defs>
+                                    <path id="a"
+                                        d="M7 5.763L1.494.256A.875.875 0 1 0 .256 1.494L5.763 7 .256 12.506a.875.875 0 1 0 1.238 1.238L7 8.237l5.506 5.507a.875.875 0 1 0 1.238-1.238L8.237 7l5.507-5.506A.875.875 0 1 0 12.506.256L7 5.763z">
+                                    </path>
+                                </defs>
+                                <use fill="#999999" fill-rule="nonzero" stroke="#FFF" transform="translate(1 1)"
+                                    xlink:href="#a">
+                                </use>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- <div class="inside-right-side-item-when-empty">
+                        <div class="when-empty">Səbətdə məhsul yoxdur</div>
+                    </div> -->
+                    <div class="inside-right-side-item-all">
+                        <div class="inside-right-side-item">
+                            <div class="d-flex">
+                                <div class="right-side-item-info">
+                                    <div class="d-flex align-items-center">
+                                        <div class="basket-item-img">
+                                            <a href=""><img class="w-100 h-100"
+                                                    src="{% static 'assets/images/Untitled-1(3).jpeg'%}" alt=""></a>
+
+                                        </div>
+                                        <div style="margin-left:10px;">
+                                            <div class="item-name-right-side-item">
+                                                <a href="">5 qapılı sadə dolab</a>
+                                            </div>
+                                            <div class="price-right-side-item">755 ₼</div>
+                                            <div class="item-minus-plus">
+                                                <span><i class="fa fa-minus " aria-hidden="true"></i></span>
+                                                <span>1</span>
+                                                <span><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-center">
+                                        <div class="price-right-side-item">755 ₼</div>
+                                        <div class="price-right-side-item-sale">Nağd alışda: 650 ₼</div>
+                                    </div>
+
+                                    <div class="exit-svg-right-side-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="13"
+                                            viewBox="0 0 16 16">
+                                            <defs>
+                                                <path id="a"
+                                                    d="M7 5.763L1.494.256A.875.875 0 1 0 .256 1.494L5.763 7 .256 12.506a.875.875 0 1 0 1.238 1.238L7 8.237l5.506 5.507a.875.875 0 1 0 1.238-1.238L8.237 7l5.507-5.506A.875.875 0 1 0 12.506.256L7 5.763z">
+                                                </path>
+                                            </defs>
+                                            <use fill="#999999" fill-rule="nonzero" stroke="#FFF"
+                                                transform="translate(1 1)" xlink:href="#a">
+                                            </use>
+                                        </svg>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="bottom-right-side-item">
+                        <div class="summary-price">Cəmi: 2265 ₼</div>
+                        <div class="book-items">
+                            <a href="">Sifariş et</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 tab-pane fade" id="v-pills-favorite" role="tabpanel"
+                    aria-labelledby="v-pills-favorite-tab">
+                    <div class="w-100 rigth-side-item-name position-relative">
+                        <span>Seçilmişlər</span>
+                        <div class="exit-svg-right-side">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="16" height="16" viewBox="0 0 16 16">
+                                <defs>
+                                    <path id="a"
+                                        d="M7 5.763L1.494.256A.875.875 0 1 0 .256 1.494L5.763 7 .256 12.506a.875.875 0 1 0 1.238 1.238L7 8.237l5.506 5.507a.875.875 0 1 0 1.238-1.238L8.237 7l5.507-5.506A.875.875 0 1 0 12.506.256L7 5.763z">
+                                    </path>
+                                </defs>
+                                <use fill="#999999" fill-rule="nonzero" stroke="#FFF" transform="translate(1 1)"
+                                    xlink:href="#a">
+                                </use>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- <div class="inside-right-side-item-when-empty">
+                        <div class="when-empty">Seçilmişlərdə məhsul yoxdur</div>
+                    </div> -->
+                    <div class="inside-right-side-item-all">
+                        <div class="inside-right-side-item">
+                            <div class="d-flex">
+                                <div class="right-side-item-info">
+                                    <div class="d-flex align-items-center">
+                                        <div class="basket-item-img">
+                                            <a href=""><img class="w-100 h-100"
+                                                    src="{% static 'assets/images/Untitled-1(3).jpeg'%}" alt=""></a>
+
+                                        </div>
+                                        <div style="margin-left:10px;">
+                                            <div class="item-name-right-side-item">
+                                                <a href="">5 qapılı sadə dolab</a>
+                                            </div>
+                                            <div class="price-right-side-item">755 ₼</div>
+                                            <div class="price-right-side-item-sale">Nağd alışda: 650 ₼</div>
+                                        </div>
+                                    </div>
+                                    <div class="div-shopping-card">
+                                        <i style="color: #999" class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div class="exit-svg-right-side-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="13"
+                                            viewBox="0 0 16 16">
+                                            <defs>
+                                                <path id="a"
+                                                    d="M7 5.763L1.494.256A.875.875 0 1 0 .256 1.494L5.763 7 .256 12.506a.875.875 0 1 0 1.238 1.238L7 8.237l5.506 5.507a.875.875 0 1 0 1.238-1.238L8.237 7l5.507-5.506A.875.875 0 1 0 12.506.256L7 5.763z">
+                                                </path>
+                                            </defs>
+                                            <use fill="#999999" fill-rule="nonzero" stroke="#FFF"
+                                                transform="translate(1 1)" xlink:href="#a">
+                                            </use>
+                                        </svg>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="w-100 h-100 tab-pane fade" id="v-pills-compare" role="tabpanel"
+                    aria-labelledby="v-pills-compare-tab">
+                    <div class="w-100 rigth-side-item-name position-relative">
+                        <span>Məhsulların müqayisəsi</span>
+                        <div class="exit-svg-right-side">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="16" height="16" viewBox="0 0 16 16">
+                                <defs>
+                                    <path id="a"
+                                        d="M7 5.763L1.494.256A.875.875 0 1 0 .256 1.494L5.763 7 .256 12.506a.875.875 0 1 0 1.238 1.238L7 8.237l5.506 5.507a.875.875 0 1 0 1.238-1.238L8.237 7l5.507-5.506A.875.875 0 1 0 12.506.256L7 5.763z">
+                                    </path>
+                                </defs>
+                                <use fill="#999999" fill-rule="nonzero" stroke="#FFF" transform="translate(1 1)"
+                                    xlink:href="#a">
+                                </use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="inside-right-side-item-when-empty">
+                        <div class="when-empty">Məhsulların müqayisəsində məhsul yoxdur</div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-call" role="tabpanel" aria-labelledby="v-pills-call-tab">
+                    ...</div>
+            </div>
+        </div>
+
+
+
+        <div class=" modal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-view" role="document">
+                <div class="modal-content">
+                    <div class="row align-items-center text-center flex-column">
+
+                        <div class="modal-body">
+                            <h3 class="call-me  text-center SignInOutFormstyle__Heading-w9z0ip-4 dUkJlM">
+                                Zəng sifariş et
+                            </h3>
+                            <!-- <h3 class="signup2  text-center SignInOutFormstyle__Heading-w9z0ip-4 dUkJlM"
+                            style="display: none;">Sign Up</h3>
+                        <p class=" text-secondary">Login with your email & password</p> -->
+                        </div>
+                        <form id="form-join">
+                            <div class="form-data mb-2"
+                                style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                                <input required class="join-call form-control" name="username" type="text"
+                                    placeholder="Ad">
+                            </div>
+
+                            <div class="form-data mb-2"
+                                style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                                <input requried class="join-call form-control" name="Telefon" type="tel" id=""
+                                    placeholder="Nömrə">
+                            </div>
+
+
+
+                            <input type="submit" class="call-button" value="Göndər">
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+
+
+
+    </section>
+
+    
+    
+   
+    <!-- .........................................................................CAROUSEL............................................................. -->
+
+    <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+    
+    {% block content %}{% endblock %}
+
+    <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+    <footer class="mt-4 footer-section">
+        <div class="footer-site">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row info-detail">
+                        <div class="col-3">
+                            <h5 class="mb-3 main-name">Ehome.az</h5>
+                            <ul class="footer-sublist">
+                                <li>
+                                    <a href="{% url 'about' %}">Haqqımızda</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'projects' %}">Layihələrimiz</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'logistica' %}">Çatdırılma və quraşdırılma</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'zemanet' %}">Ehome zəmanatə</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog' %}">Kataloq</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <h5 class="mb-3">Müştəri üçün</h5>
+                            <ul class="footer-sublist">
+                                <li>
+                                    <a href="./home/personal-page.html">Şəxsi hesabım</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'page_credit' %}">Kredit şərtləri</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'questions' %}">Tez-tez verilen suallar</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'payment_terms' %}">Ödəmə şərtləri</a>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="col-3">
+                            <h5 class="mb-3">Məlumat</h5>
+                            <ul class="footer-sublist">
+                                <li>
+                                    <a href="{% url 'location' %}">Ünvan</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'partner' %}">Partnyorlar</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'campaign' %}">Kampaniyalar</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blog' %}">Bloq</a>
+                                </li>
+                                <li>
+                                    <a href="./home/career.html">Kariyera imkanı</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <h5 class="mb-3">Əlaqə</h5>
+                            <ul class="footer-sublist footer-sublist-info">
+                                <li>
+                                    <a href="">Ünvan: Bakı, Binəqədi r-nu, 9 mkr., Mir Cəlal 11C</a>
+                                </li>
+                                <li>
+                                    <a href="">Telefon: 050 204 90 01</a>
+                                </li>
+                                <li>
+                                    <a href="">E-poçt: office@ehome.az</a>
+                                </li>
+                            </ul>
+                            <h5>Bizi izleyin</h5>
+                            <form method="POST" action="{% url 'subscribe' %}" class="subscribe-form w-100 mt-2">
+                                {% csrf_token %}
+                                <div class="for-follow-email bg-white form-group d-flex">
+                                    <input class="input-email" name="email" type="email" placeholder="E-poçt daxil edin">
+    
+                                    <input style="background: #49bd68" type="submit" value="Abune ol"
+                                        class="submit px-3 py-2 border-0 rounded text-light">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-bottom:solid 1px rgba(64,72,78,.12);">
+            <div class="d-flex justify-content-between social-card">
+                <div class="d-flex align-items-center social-sites">
+                    <h5 class="mr-3">Biz sosial şəbəkələrdə</h5>
+                    <a class="mr-2" title="Facebook" href="">
+                        <img src="{% static 'assets/images/facebook.svg'%}" alt="">
+                    </a>
+                    <a class="mr-2" title="Instagram" href="">
+                        <img src="{% static 'assets/images/instagram.svg'%}" alt="">
+                    </a>
+                    <a class="mr-2" title="Linkedin" href="">
+                        <img src="{% static 'assets/images/linkedin.svg'%}" alt="">
+                    </a>
+                    <a class="mr-2" title="Youtube" href="">
+                        <img src="{% static 'assets/images/youtube.svg'%}" alt="">
+                    </a>
+                    <a title="Whatsapp" href="https://api.whatsapp.com/send?phone=15551234567">
+                        <img src="{% static 'assets/images/wp.jpg'%}" alt="">
+                    </a>
+                </div>
+                <div class="d-flex align-items-center bank-cards">
+                    <a title="Visa" class="mr-2" href="">
+                        <img src="{% static 'assets/images/visa_classic_chip.gif'%}" alt="">
+                    </a>
+    
+                    <a title="Mastercard" class="mr-2" href="">
+                        <img src="{% static 'assets/images/mastercard_logo_5.gif'%}" alt="">
+                    </a>
+    
+                    <a title="BirKart" class="mr-2" href="">
+                        <img src="{% static 'assets/images/cashback.png'%}" alt="">
+                    </a>
+    
+                    <a title="Albalı" class="mr-2" href="">
+                        <img src="{% static 'assets/images/albali.jpeg'%}" alt="">
+                    </a>
+    
+                    <a title="BolKart" class="mr-2" href="">
+                        <img src="{% static 'assets/images/bol_ail.png'%}" alt="">
+                    </a>
+                    <a title="WorldKart" class="mr-2" href="">
+                        <img src="{% static 'assets/images/yapi-kredi-world-kart.jpeg'%}" alt="">
+                    </a>
+                    <a title="TamKart" class="" href="">
+                        <img src="{% static 'assets/images/tamkart.png'%}" alt="">
+                    </a>
+    
+                </div>
+            </div>
+            <hr style="border-bottom:solid 1px rgba(64,72,78,.12);">
+        </div>
+    </footer>
+    <!-- ............................................................................................ -->
+    
+    <button id="scroll_top" class="scroll_top">
+        <i style="color: white;" class='fas fa-angle-double-up'></i>
+    </button>
+    
+    <script>
+
+
+
+
+
+        var user = '{{user}}';
+        console.log('******',user,'*****')
+
+        // SET AJAX TOKEN 
+
+        function getToken(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+        const csrftoken = getToken('csrftoken');
+
+        // // DOCUMENT COOKIE
+
+        function getCookie(name){
+            var cookieArr = document.cookie.split(';')
+            for (let i = 0; i < cookieArr.length; i++) {
+                const cookiePair = cookieArr[i].split("=");
+                if (name == cookiePair[0].trim()) {
+                    return decodeURIComponent(cookiePair[1])
+                }
+            }
+            return null
+        }
+
+        // console.log(getCookie('cart'))
+        
+        var cart = JSON.parse(getCookie('cart'));
+        if (cart == null) {
+            console.log('CART CREATED')
+            cart = {}
+            document.cookie = 'cart=' + JSON.stringify(cart) + ';domain=;path=/'
+        }
+
+        var favourite = JSON.parse(getCookie('favourite'))
+        if (favourite == null) {
+            favourite = {}
+            document.cookie = 'favourite=' + JSON.stringify(favourite) + ';domain=;path=/'
+        }
+
+
+    </script>
+
+    <script src="{% static 'assets/js/jquery-3.5.1.min.js'%}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.js'%}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'assets/js/bootstrap.js'%}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'assets/js/main.js'%}"></script>
+    <script src="{% static 'assets/js/most-asked.js'%}"></script>
+    <script src="{% static 'assets/js/cart.js'%}"></script>
+    <script src="{% static 'assets/js/campaign-detail.js' %}"></script>
+    <script src="{% static 'assets/js/campaign.js' %}"></script>
+    <script src="{% static 'assets/js/career.js' %}"></script>
+    <script src="{% static 'assets/js/category.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'assets/js/favourite.js' %}"></script>
+    <script src="{% static 'assets/js/wow_slider.js' %}"></script>
+    <script src="{% static 'assets/js/wow_script.js' %}"></script>
+    <script src="{% static 'assets/js/product-detail.js' %}"></script>
+    <script src="{% static 'assets/js/price_range_script.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.fancybox.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-ui-touch.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-mobile.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/font-awesome.js' %}"></script>
+    <script src="{% static 'assets/js/fancybox.js' %}"></script>
+    <script src="{% static 'assets/js/device.js' %}"></script>
+    <script src="{% static 'assets/js/right-line-side.js'%}"></script>
+    </body>
+    
+    </html>
+</body>
+</html>

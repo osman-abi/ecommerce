@@ -1,0 +1,18 @@
+.for-blog-text{
+    font-family: MavenPro-Regular;
+    font-size: 16px;
+}
+
+.for-blog-text h1{
+    font-family: MavenPro-Bold;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.for-blog-main-img{
+    margin-bottom: 50px;
+}
+
+.blog-detail-info .blog-detail-part:nth-of-type(2n){
+    direction: rtl;
+}

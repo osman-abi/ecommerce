@@ -1,0 +1,126 @@
+.category-banner img{
+    width: 100%;
+    height: 100%;
+  }
+
+.most-asked-container{
+    margin: auto;
+}
+
+.most-asked-container .header_ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    }
+
+.most-asked-container .header_ul li{
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin-right: 5px;
+    }
+
+.most-asked-container .header_ul li:last-of-type{
+    margin-right: 0px !important;
+    }
+
+.most-asked-container .header_ul li a {
+    font-family: MavenPro-Regular;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.03px;
+    color: #40484e;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.most-asked-header{
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+        margin-bottom: auto;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.most-asked-header .most-asked_output_title{
+    float: left;
+    width: 100%;
+    font-family: MavenPro-Regular;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #40484e;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.most-asked-container .header_ul li:last-of-type a{
+    font-family: MavenPro-Bold
+    }
+
+.section-most-asked .ul-most-asked .most-asked-question-answer{
+    list-style: none;
+}
+
+.most-asked-questions{
+    font-size: 18px;
+    color: #333;
+    font-family: MavenPro-SemiBold;
+    border-bottom:1px solid #7777772e;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+    /* display: flex;
+    align-items: center; */
+    cursor: pointer;
+}
+
+.most-asked-questions i{
+    transform: rotate(90deg);
+}
+
+.most-asked-answers{
+    font-size: 16px;
+    color: #333;
+    font-family: MavenPro-Regular;
+    padding: 0px 20px;
+    margin: 0;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 1121px) {
+    .most-asked-container{
+    width: 1120px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .most-asked-container{
+      margin-left: 15px;
+      margin-right: 15px;
+
+    }    
+}
+@media screen and (max-width: 720px) {
+    .most-asked-container .header_ul li a{
+        font-size: 11px;
+        white-space: nowrap;
+    }
+}

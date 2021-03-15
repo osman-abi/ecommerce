@@ -1,0 +1,1346 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section>
+    <div class="category-banner">
+        <img src="{% static 'assets/images/pngtree-nordic-minimalist-furniture-banner-design-image_190039.jpeg' %}" alt="">
+    </div>
+</section>
+
+<!-- ........................................category name.................................. -->
+
+
+
+
+
+<!-- .............................................filter 1............................................ -->
+<div class="category_page_wrapper mt-3">
+
+    <!-- ................................................ -->
+    <div class="mobile-filter-menu-wrapper">
+        <div class="mobile-filter-menu-columns">
+            <div class="mobile-filter-menu-left-side">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16"
+                    height="16" viewBox="0 0 16 16">
+                    <defs>
+                        <path id="a"
+                            d="M7 5.763L1.494.256A.875.875 0 1 0 .256 1.494L5.763 7 .256 12.506a.875.875 0 1 0 1.238 1.238L7 8.237l5.506 5.507a.875.875 0 1 0 1.238-1.238L8.237 7l5.507-5.506A.875.875 0 1 0 12.506.256L7 5.763z">
+                        </path>
+                    </defs>
+                    <use fill="#FFF" fill-rule="nonzero" stroke="#FFF" transform="translate(1 1)" xlink:href="#a">
+                    </use>
+                </svg>
+            </div>
+            <div class="mobile-filter-menu-right-side">
+                <div class="mobile-filter-menu-header">
+                    <span class="filter-header">Filtr</span>
+                    <!-- <span class="filter-clear">Filteri Temizle</span> -->
+                </div>
+                <div class="mobile-filter-content">
+                    <form id="mobileSearchForm" method="get" action="">
+                        <ul class="mobile-filter-list">
+
+
+                            <li class="mobile-filter">
+                                <div class="mobile-filter-toggle-div">
+                                    <div class="mobile-filter-info-div">
+                                        <span class="mobile-filter-info-span">
+                                            <span class="mobile-filter-name">
+                                                Məhsul Tipi
+                                            </span>
+                                            <span class="mobile-filter-selected">
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="toggle-icon-div">
+                                        <i class="fa fa-plus for-icon-style" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <ul class="mobile-filter-option-list">
+                                    <li>
+                                        <div class="filter_container">
+                                            <div class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="filter_container">
+                                            <div class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="filter_container">
+                                            <div class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="filter_container">
+                                            <div class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="filter_container">
+                                            <div class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="filter_container">
+                                            <div class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                </ul>
+                            </li>
+
+
+
+                            <li name='qiymet' class="mobile-filter">
+                                <div class="mobile-filter-toggle-div">
+                                    <div class="mobile-filter-info-div">
+                                        <span class="mobile-filter-info-span">
+                                            <span class="mobile-filter-name">
+                                                Məhsul Ölçüsü
+                                            </span>
+                                            <span class="mobile-filter-selected">
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="toggle-icon-div">
+                                        <i class="fa fa-plus for-icon-style" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <ul class="mobile-filter-option-list for-range">
+                                    <li>
+                                        <div class="filter_container for-js-range">
+                                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                                <div class="range-filter-name">Genishlik</div>
+                                                <div id="slider-range4"
+                                                    class="slider-rangee filter-mobile-range filterr-filter-range"
+                                                    name="rangeInput">
+                                                </div>
+                                                <div class="inputs_wrapper position-relative">
+                                                    <input type="number" min=0 max="9900"
+                                                        oninput="validity.valid||(value='0');" id="min_filterr4"
+                                                        class="filterr-range-field min_filterr" />
+                                                    <input type="number" min=0 max="10000"
+                                                        oninput="validity.valid||(value='10000');" id="max_filterr4"
+                                                        class="filterr-range-field max_filterr" />
+                                                    <div class="measurement-unit">cm</div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container for-js-range">
+                                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                                <div class="range-filter-name">Genishlik</div>
+                                                <div id="slider-range5"
+                                                    class="slider-rangee filter-mobile-range filterr-filter-range"
+                                                    name="rangeInput">
+                                                </div>
+                                                <div class="inputs_wrapper position-relative">
+                                                    <input type="number" min=0 max="9900"
+                                                        oninput="validity.valid||(value='0');" id="min_filterr5"
+                                                        class="filterr-range-field min_filterr" />
+                                                    <input type="number" min=0 max="10000"
+                                                        oninput="validity.valid||(value='10000');" id="max_filterr5"
+                                                        class="filterr-range-field max_filterr" />
+
+                                                    <div class="measurement-unit">cm</div>
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container for-js-range">
+                                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                                <div class="range-filter-name">Genishlik</div>
+                                                <div id="slider-range6"
+                                                    class="slider-rangee filter-mobile-range filterr-filter-range"
+                                                    name="rangeInput">
+                                                </div>
+                                                <div class="inputs_wrapper position-relative">
+                                                    <input type="number" min=0 max="9900"
+                                                        oninput="validity.valid||(value='0');" id="min_filterr6"
+                                                        class="filterr-range-field min_filterr" />
+                                                    <input type="number" min=0 max="10000"
+                                                        oninput="validity.valid||(value='10000');" id="max_filterr6"
+                                                        class="filterr-range-field max_filterr" />
+                                                    <div class="measurement-unit">cm</div>
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </li>
+
+
+
+
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                        <div class="mobile-apply-filters">
+                            <a href="javascript:void(0)">Axtar</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="over-mobile-filter-menu">
+
+        </div>
+    </div>
+    <!-- ........................................................ -->
+    <div class="category_page_container">
+        <div class="d-flex justify-content-between align-items-center position-relative top-filter">
+
+            <div class="d-flex how-view-item">
+                <div class="name-category">Yataq Mebeli</div>
+                <div class="list-view-icon" style="margin-right: 5px"><i class="material-icons"
+                        style="color:#999;cursor:pointer">view_headline</i></div>
+                <div class="table-view-icon"><i class="active-view material-icons"
+                        style="color:#999;cursor:pointer">view_comfy</i></div>
+            </div>
+            <div class="d-flex categories-filtering">
+                <div class="mr-1 position-relative header-tag-filter">
+                    <button class="button-featured alphabet-dropdown dropdownn-filter">
+                        <div class="alphabet-dropdown-featured dropdownn-filter-featured">Ada Gore (A-Z)</div> <i
+                            class="fa fa-caret-down"></i>
+                    </button>
+                    <ul class="alphabet-dropdown-list dropdownn-filter-list d-none">
+                        <li class='alphabet-type-list dropdownn-filter-list-type'><a href="javascript:void(0)">Ada
+                                Gore (A-Z)</a> </li>
+                        <li class='alphabet-type-list dropdownn-filter-list-type'><a href="javascript:void(0)">Ada
+                                Gore (Z-A)</a> </li>
+                    </ul>
+                </div>
+                <div class="mr-1 position-relative header-tag-filter">
+                    <button class="button-featured price-dropdown dropdownn-filter">
+                        <div class="price-dropdown-featured dropdownn-filter-featured">Ucuzdan-Bahaya</div> <i
+                            class="fa fa-caret-down"></i>
+                    </button>
+                    <ul class="price-dropdown-list dropdownn-filter-list d-none">
+                        <li class='price-type-list dropdownn-filter-list-type'><a
+                                href="javascript:void(0)">Ucuzdan-Bahaya</a> </li>
+                        <li class='price-type-list dropdownn-filter-list-type'><a
+                                href="javascript:void(0)">Bahadan-Ucuza</a> </li>
+                    </ul>
+                </div>
+                <div class="position-relative header-tag-filter">
+                    <button class="button-featured new-or-old-dropdown dropdownn-filter">
+                        <div class="new-or-old-dropdown-featured dropdownn-filter-featured">Yeni Mehsul</div> <i
+                            class="fa fa-caret-down"></i>
+                    </button>
+                    <ul class="new-or-old-dropdown-list dropdownn-filter-list d-none">
+                        <li class='new-or-old-type-list dropdownn-filter-list-type'><a href="javascript:void(0)">Yeni
+                                Mehsul</a> </li>
+                        <li class='new-or-old-type-list dropdownn-filter-list-type'><a href="javascript:void(0)">Kohne
+                                Mehsul</a> </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="d-flex count-item">
+                <div><i class="mr-1 fa fa-eye" style="color:#999"></i></div>
+                <div>
+                    <ul class="d-flex m-0">
+                        <li>
+                            <a class='active-count' href="">16</a>
+                        </li>
+                        <li>
+                            <a href="">48</a>
+                        </li>
+                        <li>
+                            <a href="">72</a>
+                        </li>
+                        <li>
+                            <a href="">96</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ..........................................filter2.................................................... -->
+<div class="category_page_wrapper">
+    <div class="category_page_container">
+        <form id="searchForm" method="get" action="">
+
+
+            <div class="product_filters_wrapper_desktop">
+                <div class="product_filters_container">
+                    <div class="filters_title_wrapper">
+                        <ul class="filters_title_list">
+                            <li name="urun" class="filter-name">
+                                <a class="filter-icon-name" href="javascript:void(0)">
+                                    <div>Məhsul Tipi</div>
+                                    <div><i class="fa fa-caret-down"></i></div>
+                                </a>
+                            </li>
+                            <li name='yataq' class="filter-name">
+                                <a class="filter-icon-name" href="javascript:void(0)">
+                                    <div>Məhsul Tipi</div>
+
+                                    <div><i class="fa fa-caret-down"></i></div>
+                                </a>
+                            </li>
+                            <li name='olcu' class="filter-name">
+                                <a class="filter-icon-name" href="javascript:void(0)">
+                                    <div>Məhsul Tipi</div>
+
+                                    <div><i class="fa fa-caret-down"></i></div>
+                                </a>
+                            </li>
+                            <li name='qiymet' class="filter-name">
+                                <a class="filter-icon-name" href="javascript:void(0)">
+                                    <div>Məhsul Ölçüsü</div>
+
+                                    <div><i class="fa fa-caret-down"></i></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters_inner_wrapper ">
+
+
+                        <div name="urun" class="filters_inner_list ">
+                            <div class="filter_wrapper">
+                                <ul class="filter_list">
+                                    <li>
+                                        <div class="filter_container">
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+
+
+
+
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                        <div name='yataq' class="filters_inner_list">
+                            <div class="filter_wrapper">
+                                <ul class="filter_list">
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                        <div name="olcu" class="filters_inner_list">
+                            <div class="filter_wrapper">
+                                <ul class="filter_list">
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="filter_container">
+
+                                            <label class="filter_label tooltip-feature">
+                                                <input class="custom-checkbox" type="checkbox">
+                                                <span class="filter_name">Organik</span>
+                                                <span class="product_count">(438)</span>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div name="qiymet" class="filters_inner_list">
+                            <div class="filter_wrapper">
+                                <ul class="filter_list">
+                                    <li class="filterr_filter">
+                                        <div class="filterr-range-block">
+                                            <div class="filterr-range-container for-js-range filterrrange">
+                                                <div class="range-filter-name">Genishlik</div>
+                                                <div id="slider-range" class="slider-rangee filterr-filter-range"
+                                                    name="rangeInput">
+                                                </div>
+                                                <div class="inputs_wrapper">
+                                                    <input type="number" min=0 max="9900"
+                                                        oninput="validity.valid||(value='0');" id="min_filterr"
+                                                        class="filterr-range-field min_filterr" />
+                                                    <input type="number" min=0 max="10000"
+                                                        oninput="validity.valid||(value='10000');" id="max_filterr"
+                                                        class="filterr-range-field max_filterr" />
+                                                </div>
+
+                                            </div>
+                                            <div class="measurement-unit">cm</div>
+
+                                            <div class="filterr-range-container for-js-range filterrrange">
+                                                <div class="range-filter-name">Yukseklik</div>
+                                                <div id="slider-range2" class="slider-rangee filterr-filter-range"
+                                                    name="rangeInput">
+                                                </div>
+                                                <div class="inputs_wrapper">
+                                                    <input type="number" min=0 max="9900"
+                                                        oninput="validity.valid||(value='0');" id="min_filterr2"
+                                                        class="filterr-range-field min_filterr" />
+                                                    <input type="number" min=0 max="10000"
+                                                        oninput="validity.valid||(value='10000');" id="max_filterr2"
+                                                        class="filterr-range-field max_filterr" />
+
+
+
+                                                    <input type="hidden" class="minvalue" name="override_filterr_min"
+                                                        value="">
+                                                    <input type="hidden" class="maxvalue" name="override_filterr_max"
+                                                        value="">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="measurement-unit">cm</div>
+
+                                            <div class="filterr-range-container for-js-range filterrrange">
+                                                <div class="range-filter-name">Derinlik</div>
+                                                <div id="slider-range3" class="slider-rangee filterr-filter-range"
+                                                    name="rangeInput">
+                                                </div>
+                                                <div class="inputs_wrapper">
+                                                    <input type="number" min=0 max="9900"
+                                                        oninput="validity.valid||(value='0');" id="min_filterr3"
+                                                        class="filterr-range-field min_filterr" />
+                                                    <input type="number" min=0 max="10000"
+                                                        oninput="validity.valid||(value='10000');" id="max_filterr3"
+                                                        class="filterr-range-field max_filterr" />
+
+
+
+                                                    <input type="hidden" class="minvalue" name="override_filterr_min"
+                                                        value="">
+                                                    <input type="hidden" class="maxvalue" name="override_filterr_max"
+                                                        value="">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="measurement-unit">cm</div>
+
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="apply_filters">
+                            <a href="javascript:void(0)">Axtar</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </form>
+        <div class="mobile-filter-header-wrapper">
+            <div class="mobile-filter-header-column double-show-active ">
+                <div class="position-relative header-tag-filter ">
+                    <button class="button-featured queue-dropdown-mobile dropdownn-filter">
+                        <div class="queue-dropdown-featured-mobile dropdownn-filter-featured"><i
+                                class="material-icons">swap_vert</i> Teyin Edilmis</div>
+                    </button>
+                    <ul class="queue-dropdown-list-mobile dropdownn-filter-list d-none">
+                        <li class="queue-type-list-mobile dropdownn-filter-list-type"><a href="javascript:void(0)">Teyin
+                                Edilmis</a> </li>
+                        <li class="queue-type-list-mobile dropdownn-filter-list-type"><a
+                                href="javascript:void(0)">Populyarligina
+                                gore</a> </li>
+                        <li class="queue-type-list-mobile dropdownn-filter-list-type"><a
+                                href="javascript:void(0)">Tarixe Gore</a>
+                        </li>
+                        <li class="queue-type-list-mobile dropdownn-filter-list-type"><a href="javascript:void(0)">
+                                Evvelce ucuz</a> </li>
+                        <li class="queue-type-list-mobile dropdownn-filter-list-type"><a href="javascript:void(0)">
+                                Evvelce baha</a> </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="mobile-filter-header-column">
+                <div class="filter-panel-opener">
+
+                    <a href="javascript:void(0)">
+                        <i style="margin-right: 4px;" class="material-icons">tune</i>
+                        Filtr
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ..................................................count item............................................ -->
+<div class="d-block position-relative section-items-count">
+    <div class="countt-itemm d-flex justify-content-center"> 245 mehsul </div>
+    <div class="position-absolute filter-in-count-section">
+        <div class="position-relative header-tag-filter ">
+            <button class="button-featured queue-dropdown dropdownn-filter">
+                <div class="queue-dropdown-featured dropdownn-filter-featured">Teyin Edilmis</div> <i
+                    class="material-icons">swap_vert</i>
+            </button>
+            <ul class="queue-dropdown-list dropdownn-filter-list d-none">
+                <li class='queue-type-list dropdownn-filter-list-type'><a href="javascript:void(0)">Teyin
+                        Edilmis</a> </li>
+                <li class='queue-type-list dropdownn-filter-list-type'><a href="javascript:void(0)">Populyarligina
+                        gore</a> </li>
+                <li class='queue-type-list dropdownn-filter-list-type'><a href="javascript:void(0)">Tarixe Gore</a>
+                </li>
+                <li class='queue-type-list dropdownn-filter-list-type'><a href="javascript:void(0)">Qiymete gore:
+                        Evvelce ucuz</a> </li>
+                <li class='queue-type-list dropdownn-filter-list-type'><a href="javascript:void(0)">Qiymete gore:
+                        Evvelce baha</a> </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- ....................................items..................................... -->
+<section class="mt-4">
+    <div class="category-items">
+        <div class="row m-0" style="border: 1px solid #7777772e;">
+            <div class="row w-100 m-0 all-items-view-table">
+                <div class="each-items col-lg-3 rt-item" product_slug="slug1">
+                    <div class="items-height" style="padding: 25px 30px 0px 30px ">
+                        <div style="padding-top: 100%" class="position-relative">
+                            <a class="position-absolute h-100 w-100" style="top:0" href="product-detail.html">
+                                <img class="all-images w-100 h-100 item-images" src="{% static 'assets/images/Untitled-1(5).jpeg' %}"
+                                    alt="">
+                            </a>
+                            <div class="credit-duration">0₼ 0% 12 ay</div>
+                            <div class="items-svg position-absolute">
+                                <div title="Seçilmiş et" class="svg-filess">
+                                    <i style="color: white" class="fa fa-heart" aria-hidden="true"></i>
+                                </div>
+                                <div title="Müqayisə et" class="svg-filess">
+                                    <i style="color: white" class="fas fa-balance-scale-right" aria-hidden="true"></i>
+                                </div>
+                                <div data-toggle="modal" data-target="#oneClickModal" title="1 kliklə alma"
+                                    class="svg-filess">
+                                    <i style="color: white" class="fas fa-hand-point-up" aria-hidden="true"></i>
+                                </div>
+                                <div data-toggle="modal" data-target="#quickViewModal" title="Sürətli baxış"
+                                    class="svg-files-quick svg-filess">
+                                    <i style="color: white" class="fas fa-clock" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <div class="rating">
+                                <div class="votes_block nstar">
+                                    <div class="ratings">
+                                        <div class="inner_rating">
+                                            <div class="item-rating" title="1">
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="item-rating " title="2"><i class="fas fa-star"></i></div>
+                                            <div class="item-rating " title="3"><i class="fas fa-star"></i></div>
+                                            <div class="item-rating " title="4"><i class="fas fa-star"></i></div>
+                                            <div class="item-rating" title="5"><i class="fas fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-title" style="height: 44px;">
+                                <a href="product-detail.html"
+                                    class="dark_link option-font-bold font_sm"><span>Kondisioner AUX ASW-H09A4/FFR1 9000
+                                        BTU</span></a>
+                            </div>
+                            <div class="sa_block" data-fields="null" data-stores="[]" data-user-fields="null"
+                                style="height: 44px;">
+                                <!-- <div class="item-stock js-show-stores js-show-info-block" data-id="5235"><span
+                                        class="icon stock"></span><span class="value font_sxs">Anbarda kifayət qədər
+                                        var.</span></div> -->
+                                <!-- <div class="article_block" data-name="Art." data-value="ASW-H09A4">
+                                    <div class="muted font_sxs">Art.: ASW-H09A4</div>
+                                </div> -->
+                                <div class="cost prices clearfix" style="height: 167px;">
+                                    <div class="icons-basket-wrapper offer_buy_block ce_cmp_hidden">
+                                        <div class="button_block">
+                                            <!--noindex-->
+                                            <span title="Səbətə əlavə et" style="width: 38px;height:38px"
+                                                class="insert-basket d-flex justify-content-center align-items-center btn-exlg to-cart btn btn-default transition_bg animate-load has-ripple">
+                                                <i style="color: #999" class="fas fa-shopping-cart"
+                                                    aria-hidden="true"></i></span>
+                                            <!--/noindex-->
+                                        </div>
+                                    </div>
+                                    <div class="price_matrix_wrapper ">
+                                        <div class="d-flex for-credit">
+                                            <div>Kreditle:</div>
+                                            <div class="ml-1 credit-price align-items-center">2865 ₼</div>
+                                        </div>
+                                        <div class="d-flex cash-price align-items-center">
+                                            <div>Nağd:</div>
+                                            <div class="cash-price-percent">-40%</div>
+                                            <div class="ml-1 cash-pricee">2115 ₼</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="list-view-item-all">
+                <div product_slug="slug1" class="listt-view rt-item">
+                    <div class="list-view-item-left">
+                        <div class="list-view-item-img">
+                            <a href=""> <img class="w-100 h-100" src="{% static 'assets/images/Untitled-1(5).jpeg' %}" alt=""></a>
+                            <div class="credit-duration">0₼ 0% 12 ay</div>
+                        </div>
+                        <div class="list-view-item-name-star">
+                            <div class="list-view-item-name">
+                                <a href="">Kondisioner AUX ASW-H09A4/FFR1 9000 BTU</a>
+                            </div>
+                            <div class="inner_rating">
+                                <div class="item-rating" title="1">
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="item-rating " title="2"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                <div class="item-rating " title="3"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                <div class="item-rating " title="4"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                <div class="item-rating" title="5"><i class="fas fa-star" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price_matrix_wrapper ">
+                        <div class="d-flex for-credit">
+                            <div>Kreditle:</div>
+                            <div class="ml-1 credit-price align-items-center">2865 ₼</div>
+                        </div>
+                        <div class="d-flex cash-price align-items-center">
+                            <div>Nağd:</div>
+                            <div class="cash-price-percent">-40%</div>
+                            <div class="ml-1 cash-pricee">2115 ₼</div>
+                        </div>
+                    </div>
+                    <div class="list-view-item-selector">
+                        <span title="Səbətə əlavə et" style="width: 38px;height:38px"
+                            class="insert-basket d-flex justify-content-center align-items-center">
+                            <i style="color: #999" class="fas fa-shopping-cart" aria-hidden="true"></i></span>
+                        <span title="Seçilmişlərə əlavə et" style="width: 38px;height:38px"
+                            class="d-flex justify-content-center align-items-center">
+                            <i style="color: #999" class="fa fa-heart" aria-hidden="true"></i></span>
+                        <span title="Müqayisə et" style="width: 38px;height:38px"
+                            class="d-flex justify-content-center align-items-center">
+                            <i style="color: #999" class="fas fa-balance-scale-right" aria-hidden="true"></i></span>
+                        <span data-toggle="modal" data-target="#oneClickModal" title="1 kliklə alma"
+                            style="width: 38px;height:38px" class="d-flex justify-content-center align-items-center">
+                            <i style="color: #999" class="fas fa-hand-point-up" aria-hidden="true"></i></span>
+                        <span data-toggle="modal" data-target="#quickViewModal" title="Sürətli baxış"
+                            style="width: 38px;height:38px"
+                            class="quick-viewww d-flex justify-content-center align-items-center">
+                            <i style="color: #999" class="fas fa-clock" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+</section>
+
+
+<!-- ..................................quick view modal....................................... -->
+<div class=" modal fade" id="quickViewModal" tabindex="-1" role="dialog" aria-labelledby="qucikViewModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog quick-view-modal-dialog modal-view" role="document">
+        <div class="modal-content">
+            <div class="row align-items-center text-center flex-column">
+
+                <div class="modal-body w-100">
+                    <div id="owl-carousel-quick-view" class="owl-carousel-all owl-quick-view owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="position-relative">
+                                <div class="row main_product_output mb-2">
+                                    <div class="main_product_products_output_title">YATAQ OTAĞI</div>
+                                </div>
+                                <div class="d-flex"
+                                    style="border-bottom:1px solid #7777772e;padding-left:15px;padding-bottom:15px;">
+                                    <div class="d-flex align-items-center d-inline-block modal-item-icon">
+                                        <i style="color: #71767b;font-size: 16px;margin-right: 8px;" class="fa fa-heart"
+                                            aria-hidden="true"></i>
+                                        <span>Seçilmiş et</span>
+                                    </div>
+                                    <div class="ml-2 d-flex align-items-center d-inline-block modal-item-icon">
+                                        <i style="color: #71767b;font-size: 16px;margin-right: 8px;"
+                                            class="fas fa-balance-scale-right" aria-hidden="true"></i>
+                                        <span>Müqayisə et</span>
+                                    </div>
+                                    <div class="inner_rating modal-inner-rating">
+                                        <div class="item-rating" title="1">
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="item-rating " title="2"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                        <div class="item-rating " title="3"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                        <div class="item-rating " title="4"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                        <div class="item-rating" title="5"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                                <div class="row m-0" style="padding:15px">
+                                    <div class="col-6" style="border-right:1px solid #7777772e;">
+                                        <div class="modal-item-img">
+                                            <div class="position-relative">
+                                                <img class="w-100 h-100" src="{% static 'assets/images/Untitled-1(3).jpeg' %}" alt="">
+                                                <div class="credit-duration" style="left:0;">0₼ 0% 12 ay</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="modal-quick-view-price">
+                                            <div class="d-flex col-6 p-0 for-credit">
+                                                <div>Kreditle:</div>
+                                                <div class="ml-1 credit-price align-items-center">2865 ₼</div>
+                                            </div>
+                                            <div class="d-flex col-6 p-0 cash-price align-items-center">
+                                                <div>Nağd:</div>
+                                                <div class="cash-price-percent">-40%</div>
+                                                <div class="ml-1 cash-pricee">2115 ₼</div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex" style="margin-bottom: 5px;">
+                                            <div class="modal-quick-view-item-stock">
+                                                <span class="value-quick-view">Anbarda kifayət qədər var.</span>
+                                            </div>
+                                            <div class="modal-quick-view-article_block">
+                                                <div class="muted-quick-view">Art.: ASW-H09A4</div>
+                                            </div>
+                                        </div>
+                                        <div data-toggle="modal" data-target="#oneClickModal"
+                                            class="buy-one-click-quick-view">
+                                            <a href="javascript:void(0)">1 kliklə al</a>
+                                        </div>
+                                        <div class="add-basket-product-quick-view">
+                                            <span href="">Səbətə at</span>
+                                        </div>
+                                        <div class="product-features-quick-view">
+                                            <ul class="ul-product-features-quick-view">
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"
+                                                            style="transform: rotate(90deg); transition: transform 0.5s ease 0s;"></i>Məhsulun
+                                                        xüsusiyyətləri </div>
+                                                    <p class="product-features-answers-quick-view" style="">Lorem ipsum,
+                                                        dolor sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"
+                                                            style="transform: rotate(90deg); transition: transform 0.5s ease 0s;"></i>
+                                                        Çatdırılma
+                                                        və quraşdırılma</div>
+                                                    <p class="product-features-answers-quick-view" style="">Lorem ipsum,
+                                                        dolor sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"></i>
+                                                        Ödəniş</div>
+                                                    <p class="product-features-answers-quick-view">Lorem ipsum, dolor
+                                                        sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"></i>
+                                                        Kredit
+                                                        şərtləri</div>
+                                                    <p class="product-features-answers-quick-view">Lorem ipsum, dolor
+                                                        sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="position-relative">
+                                <div class="row main_product_output mb-2">
+                                    <div class="main_product_products_output_title">YATAQ OTAĞI</div>
+                                </div>
+                                <div class="d-flex"
+                                    style="border-bottom:1px solid #7777772e;padding-left:15px;padding-bottom:15px;">
+                                    <div class="d-flex align-items-center d-inline-block modal-item-icon">
+                                        <i style="color: #71767b;font-size: 16px;margin-right: 8px;" class="fa fa-heart"
+                                            aria-hidden="true"></i>
+                                        <span>Seçilmiş et</span>
+                                    </div>
+                                    <div class="ml-2 d-flex align-items-center d-inline-block modal-item-icon">
+                                        <i style="color: #71767b;font-size: 16px;margin-right: 8px;"
+                                            class="fas fa-balance-scale-right" aria-hidden="true"></i>
+                                        <span>Müqayisə et</span>
+                                    </div>
+                                    <div class="inner_rating modal-inner-rating">
+                                        <div class="item-rating" title="1">
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="item-rating " title="2"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                        <div class="item-rating " title="3"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                        <div class="item-rating " title="4"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                        <div class="item-rating" title="5"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                                <div class="row m-0" style="padding:15px">
+                                    <div class="col-6" style="border-right:1px solid #7777772e;">
+                                        <div class="modal-item-img">
+                                            <div class="position-relative">
+                                                <img class="w-100 h-100" src="{% static 'assets/images/Untitled-1(3).jpeg' %}" alt="">
+                                                <div class="credit-duration" style="left:0;">0₼ 0% 12 ay</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="modal-quick-view-price">
+                                            <div class="d-flex col-6 p-0 for-credit">
+                                                <div>Kreditle:</div>
+                                                <div class="ml-1 credit-price align-items-center">2865 ₼</div>
+                                            </div>
+                                            <div class="d-flex col-6 p-0 cash-price align-items-center">
+                                                <div>Nağd:</div>
+                                                <div class="cash-price-percent">-40%</div>
+                                                <div class="ml-1 cash-pricee">2115 ₼</div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex" style="margin-bottom: 5px;">
+                                            <div class="modal-quick-view-item-stock">
+                                                <span class="value-quick-view">Anbarda kifayət qədər var.</span>
+                                            </div>
+                                            <div class="modal-quick-view-article_block">
+                                                <div class="muted-quick-view">Art.: ASW-H09A4</div>
+                                            </div>
+                                        </div>
+                                        <div data-toggle="modal" data-target="#oneClickModal"
+                                            class="buy-one-click-quick-view">
+                                            <a href="javascript:void(0)">1 kliklə al</a>
+                                        </div>
+                                        <div class="add-basket-product-quick-view">
+                                            <span href="">Səbətə at</span>
+                                        </div>
+                                        <div class="product-features-quick-view">
+                                            <ul class="ul-product-features-quick-view">
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"
+                                                            style="transform: rotate(90deg); transition: transform 0.5s ease 0s;"></i>Məhsulun
+                                                        xüsusiyyətləri </div>
+                                                    <p class="product-features-answers-quick-view" style="">Lorem ipsum,
+                                                        dolor sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"
+                                                            style="transform: rotate(90deg); transition: transform 0.5s ease 0s;"></i>
+                                                        Çatdırılma
+                                                        və quraşdırılma</div>
+                                                    <p class="product-features-answers-quick-view" style="">Lorem ipsum,
+                                                        dolor sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"></i>
+                                                        Ödəniş</div>
+                                                    <p class="product-features-answers-quick-view">Lorem ipsum, dolor
+                                                        sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"></i>
+                                                        Kredit
+                                                        şərtləri</div>
+                                                    <p class="product-features-answers-quick-view">Lorem ipsum, dolor
+                                                        sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="position-relative">
+                                <div class="row main_product_output mb-2">
+                                    <div class="main_product_products_output_title">YATAQ OTAĞI</div>
+                                </div>
+                                <div class="d-flex"
+                                    style="border-bottom:1px solid #7777772e;padding-left:15px;padding-bottom:15px;">
+                                    <div class="d-flex align-items-center d-inline-block modal-item-icon">
+                                        <i style="color: #71767b;font-size: 16px;margin-right: 8px;" class="fa fa-heart"
+                                            aria-hidden="true"></i>
+                                        <span>Seçilmiş et</span>
+                                    </div>
+                                    <div class="ml-2 d-flex align-items-center d-inline-block modal-item-icon">
+                                        <i style="color: #71767b;font-size: 16px;margin-right: 8px;"
+                                            class="fas fa-balance-scale-right" aria-hidden="true"></i>
+                                        <span>Müqayisə et</span>
+                                    </div>
+                                    <div class="inner_rating modal-inner-rating">
+                                        <div class="item-rating" title="1">
+                                            <i class="fas fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="item-rating " title="2"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                        <div class="item-rating " title="3"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                        <div class="item-rating " title="4"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                        <div class="item-rating" title="5"><i class="fas fa-star"
+                                                aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                                <div class="row m-0" style="padding:15px">
+                                    <div class="col-6" style="border-right:1px solid #7777772e;">
+                                        <div class="modal-item-img">
+                                            <div class="position-relative">
+                                                <img class="w-100 h-100" src="{% static 'assets/images/Untitled-1(3).jpeg' %}" alt="">
+                                                <div class="credit-duration" style="left:0;">0₼ 0% 12 ay</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="modal-quick-view-price">
+                                            <div class="d-flex col-6 p-0 for-credit">
+                                                <div>Kreditle:</div>
+                                                <div class="ml-1 credit-price align-items-center">2865 ₼</div>
+                                            </div>
+                                            <div class="d-flex col-6 p-0 cash-price align-items-center">
+                                                <div>Nağd:</div>
+                                                <div class="cash-price-percent">-40%</div>
+                                                <div class="ml-1 cash-pricee">2115 ₼</div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex" style="margin-bottom: 5px;">
+                                            <div class="modal-quick-view-item-stock">
+                                                <span class="value-quick-view">Anbarda kifayət qədər var.</span>
+                                            </div>
+                                            <div class="modal-quick-view-article_block">
+                                                <div class="muted-quick-view">Art.: ASW-H09A4</div>
+                                            </div>
+                                        </div>
+                                        <div data-toggle="modal" data-target="#oneClickModal"
+                                            class="buy-one-click-quick-view">
+                                            <a href="javascript:void(0)">1 kliklə al</a>
+                                        </div>
+                                        <div class="add-basket-product-quick-view">
+                                            <span href="">Səbətə at</span>
+                                        </div>
+                                        <div class="product-features-quick-view">
+                                            <ul class="ul-product-features-quick-view">
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"
+                                                            style="transform: rotate(90deg); transition: transform 0.5s ease 0s;"></i>Məhsulun
+                                                        xüsusiyyətləri </div>
+                                                    <p class="product-features-answers-quick-view" style="">Lorem ipsum,
+                                                        dolor sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"
+                                                            style="transform: rotate(90deg); transition: transform 0.5s ease 0s;"></i>
+                                                        Çatdırılma
+                                                        və quraşdırılma</div>
+                                                    <p class="product-features-answers-quick-view" style="">Lorem ipsum,
+                                                        dolor sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"></i>
+                                                        Ödəniş</div>
+                                                    <p class="product-features-answers-quick-view">Lorem ipsum, dolor
+                                                        sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                                <li class="product-features-question-answer-quick-view">
+                                                    <div class="product-features-questions-quick-view"> <i
+                                                            class="fa fa-caret-right mr-2" aria-hidden="true"></i>
+                                                        Kredit
+                                                        şərtləri</div>
+                                                    <p class="product-features-answers-quick-view">Lorem ipsum, dolor
+                                                        sit amet consectetur adipisicing
+                                                        elit. Harum laboriosam ipsam quibusdam animi quidem cum in
+                                                        necessitatibus asperiores
+                                                        fugiat exercitationem, esse illo recusandae reiciendis sunt
+                                                        excepturi voluptatem earum
+                                                        beatae quis!</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- .................................modal one click buy........................................... -->
+<div class=" modal fade" id="oneClickModal" tabindex="-1" role="dialog" aria-labelledby="oneClickLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-view" role="document">
+        <div class="modal-content">
+            <div class="row align-items-center text-center flex-column">
+
+                <div class="modal-body">
+                    <h3 class="one-click-header  text-center SignInOutFormstyle__Heading-w9z0ip-4 dUkJlM">
+                        1 kliklə al
+                    </h3>
+                </div>
+                <form id="form-join">
+                    <div class="form-data"
+                        style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                        <input class="mb-2 joinj form-control" name="username" type="text" placeholder="Ad">
+                    </div>
+
+                    <div class="form-data"
+                        style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                        <input class="mb-2 joinj form-control" name="nömrə" type="Tel" id="" placeholder="Nömrə">
+                    </div>
+
+
+
+                    <input type="submit" class="jbutton" value="Göndər">
+                </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- .............................................pagination........................................... -->
+<div class="mb-2 pagination_wrapper">
+    <ul class="pagination_ul">
+
+        <li class="active_page">
+            <a href="javascript:void(0);">
+                1
+            </a>
+        </li>
+        <li class="">
+            <a href="">
+                2
+            </a>
+        </li>
+        <li class="">
+            <a href="">
+                3
+            </a>
+        </li>
+        <li class="">
+            <a href="">
+                4
+            </a>
+        </li>
+        <li class="">
+            <a href="">
+                5
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+
+
+1. 2 il zəmanət icon dəyişəcək
+2. product detail səhifəsində image auto slide ləğv et.
+3. product detail səhifəsində şəkilə klik edəndə tam ekran açılsın
+4. product detail səhifəsində iconlar dəyişiləcək uyğun olaraq
+5. product detail səhifəsində sağdakı card-da qənaət  azn göstərilsin
+6. product detail səhifəsində oxşar məhsullarda dizayn kateqoriyalardakı product dizaynı ilə eyni olsun
+7. Daha öncə baxdıqlarınız kateqoriyalardakı product dizaynı ilə eyni olsun
+8. ödəmə şərtləri icon dəyişməlidir (map icounudur hazırda)
+9. whatsapp solda
+10. qeydiyyatda Ad, Soyad, Email, No
+11. category detail səhifəsində alt categories şəkilləri ilə
+12. Filterlər-ə baxmaq
+13. topbar-da AZ RU dil seçimi
+14. Layihə-də light gallery
+15. product detail-də light gallery
+16. nömrəyə click edəndə zəng getsin
+17. müqayisə sadəcə görüntüləmək üçündü (seçilmişlər kimi)
+18. sosial şəbəkələr-də twitter olmayacaq
+19. Partnyorlar bölümü(əlavə) - şəkil və text
+20. Karyera imkanı-da cv file üçün yer əlavə etmək
+21. Sağda rəqəmlər icon-a görə çox böyükdü. Kiçildilsin
+22. product detail-də paylaşım
+

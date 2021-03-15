@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- ........................................................banner........................................... -->
+    <section>
+        <div class="career-banner">
+            <img class="all-images" src="{% static 'assets/images/3.jpeg'%}" alt="">
+        </div>
+    </section>
+
+    <!-- .....................................Career.......................................... -->
+    <section class="career-container" style="margin-top: 1rem">
+        <div>
+            <ul class="header_ul" id="header_ul">
+                <li>
+                    <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+                </li>
+                <li>
+                    <a title="Kariyera imkanı" href=""> &gt;Kariyera imkanı</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row career-header mb-2" style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+            <div class="career_output_title"
+                style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
+                Kariyera imkani</div>
+        </div>
+
+        <div class="section-career">
+            <ul class="ul-career">
+                <li class="career-question-answer">
+                    <div class="career-questions"> <i class="fa fa-caret-right mr-2"></i> Nə üçün Ehome</div>
+                    <p class="career-answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                        explicabo eveniet consequuntur mollitia, est sint, laboriosam vero ratione nesciunt non facilis
+                        deleniti aperiam cumque eos sunt voluptatem. Error, maiores pariatur?Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Voluptates
+                        explicabo eveniet consequuntur mollitia, est sint, laboriosam vero ratione nesciunt non facilis
+                        deleniti aperiam cumque eos sunt voluptatem. Error, maiores pariatur?</p>
+                </li>
+                <li class="career-question-answer">
+                    <div class="career-questions"> <i class="fa fa-caret-right mr-2"></i> Aktiv vakansiyalar</div>
+                    <p class="career-answers">ForHome şirkəti sizə pəşəkar inkişaf və karyera irəliləyişi imkanı verir.
+                        <br>
+
+                        Şirkətimizə mütəxəssislərin cəlb olunması, onların inkişafı, mütəmadi təhsili, peşəkarlıq
+                        səviyyələrinin yüksəldilməsi və işgüzarlıq keyfiyyətlərinin artırılması üzrə fəal iş aparırıq.
+                        <br>
+
+                        Biz bütün namizədlər üçün eyni şərait yaradırıq və işə qəbul, seçim proseslərində şəffaflıq
+                        prinsiplərinə riayət edirik. Bütün vakansiyaları şirkətin rəsmi internet səhifəsində
+                        yerləşdiririk. <br>
+
+                        ForHome-un peşəkar kollektivinə Siz də qoşulmaq istəyirsinizsə aşağıda təklif olunan
+                        vakansiyaları nəzərdən keçirin. Maraqlandığınız iş təklifini seçərək ətraflı məlumat alın və iş
+                        tələblərilə tanış olun. Bilik və bacarıqlarınız uyğun gəldiyi vakansiyaya müraciətinizi
+                        göndərin. <br>
+
+                        Vakansiyalara müraciət etmək üçün CV formasını mövzu yerində müraciət etmək istədiyiniz
+                        vakansiyanın adını qeyd edərək info@forhome.az ünvanına göndərə və ya aşağıdakı keçiddən CV
+                        formasından istifadə edə bilərsiniz.</p>
+                </li>
+            </ul>
+        </div>
+
+        <form action="">
+            <div class="row m-0 p-0 form-inputs">
+                <div class="col-md-4 col-sm-6 col-12 form-input">
+                    <input required="required" type="text" placeholder="Ad">
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 form-input">
+                    <input required="required" type="text" placeholder="Soyad">
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 form-input">
+                    <input required="required" type="text" placeholder="Ata adi">
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 form-input">
+                    <input required="required" type="text" placeholder="Telefon nömrəsi">
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 form-input">
+                    <input required="required" type="text" placeholder="Yaşınız">
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 form-input">
+                    <select name="education" required="required">
+                        <option value="" disabled="" selected="">Təhsiliniz</option>
+                        <option value="Ali">Ali</option>
+                        <option value="Natamam ali">Natamam ali</option>
+                        <option value="Orta">Orta</option>
+                    </select>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 form-input">
+                    <select name="city" required="required">
+                        <option value="" disabled="" selected="">Şəhər</option>
+                        <option value="Bakı">Bakı</option>
+                        <option value="Sumqayıt">Sumqayıt</option>
+                    </select>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 form-input">
+                    <select name="experience" required="required">
+                        <option value="" disabled="" selected="">İş təcrübəniz</option>
+                        <option value="1 ildən aşağı">1 ildən aşağı</option>
+                        <option value="1 ildən 3 ilə qədər">1 ildən 3 ilə qədər</option>
+                        <option value="3 ildən 5 ilə qədər">3 ildən 5 ilə qədər</option>
+                        <option value="5 ildən artıq">5 ildən artıq</option>
+                    </select>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 form-input">
+                    <input required="required" type="text" placeholder="Müraciət etdiyiniz vakansiya">
+                </div>
+                <div class="col-12 form-input">
+                    <textarea name="about_education" id="" cols="30" rows="4"
+                        placeholder="Bacarıqlarınız" 
+                        required="required"></textarea>
+                </div>
+                <div class="col-12 form-input-submit">
+                        <input type="submit" value="Göndər">
+                </div>
+            </div>
+        </form>
+
+    </section>
+
+{% endblock %}

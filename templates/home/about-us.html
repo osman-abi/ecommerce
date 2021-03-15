@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- ........................................................banner........................................... -->
+    <section>
+            <div class="category-banner">
+                <img  src="{% static 'assets/images/pngtree-nordic-minimalist-furniture-banner-design-image_190039.jpeg'%}" alt="">
+            </div>
+        </section>
+
+    <!-- .....................................Guarantee.......................................... -->
+    <section class="about-us-container" style="margin-top: 1rem">
+        <div>
+            <ul class="header_ul" id="header_ul">
+                <li>
+                    <a title="Əsas Səhifə" href="{% url 'home' %}">Əsas səhifə</a>
+                </li>
+                <li>
+                    <a title="Haqqımızda" href="{% url 'about' %}"> &gt;Haqqımızda</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row about-us-header mb-2"
+            style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+            <div class="about-us_output_title"
+                style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
+                Haqqımızda</div>
+        </div>
+
+        {% for about in abouts %}
+            
+
+        <div class="all-about-us-terms">
+            <p class="terms">{{about.content}}<br></p>
+        </div>
+
+        {% endfor %}
+
+
+
+    </section>
+{% endblock %}

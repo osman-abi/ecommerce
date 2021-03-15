@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- ........................................................banner........................................... -->
+    <!-- <section>
+            <div class="category-banner">
+                <img class="all-images" src="{% static 'assets/images/3.jpeg'%}" alt="">
+            </div>
+        </section> -->
+
+    <!-- .....................................Location.......................................... -->
+    <section class="location-container" style="margin-top: 1rem">
+        <div>
+            <ul class="header_ul" id="header_ul">
+                <li>
+                    <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+                </li>
+                <li>
+                    <a title="Ünvan" href=""> &gt;Ünvan</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row location-header mb-2" style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+            <div class="location_output_title"
+                style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
+                Ünvan</div>
+        </div>
+
+        {% for addrss in adresses %}
+            
+        
+
+        <div class="location-information-ehome">
+                <h3 class="branch-location">{{addrss.branch_name}}</h3>
+                <div class="adress-ehome">Ünvan: {{addrss.address}}</div>
+                <div class="mail-ehome">Mail: {{addrss.email}}</div>
+                <div class="telephone-ehome">Telefon: {{addrss.phone_number}}</div>
+            </div>
+            {% endfor %}
+
+        <div class="location-ehome-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12153.112707898528!2d49.8054931!3d40.40268790174809!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xec68a00e9084dce7!2sEhome%20az!5e0!3m2!1sen!2s!4v1609931903671!5m2!1sen!2s"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </div>
+
+
+
+
+
+    </section>
+
+{% endblock %}

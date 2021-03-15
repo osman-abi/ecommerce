@@ -1,0 +1,38 @@
+
+Ehome
+
+
+1. 2 il zəmanət icon dəyişəcək
+2. product detail səhifəsində image auto slide ləğv et. 
+3. product detail səhifəsində şəkilə klik edəndə tam ekran açılsın
+4. product detail səhifəsində iconlar dəyişiləcək uyğun olaraq
+5. product detail səhifəsində sağdakı card-da qənaət  azn göstərilsin
+6. product detail səhifəsində Məhsul xüsusiyyətlərində cədvəl və şəkil mütləq olsun
+7. product detail səhifəsində oxşar məhsullarda dizayn kateqoriyalardakı product dizaynı ilə eyni olsun
+8. Daha öncə baxdıqlarınız kateqoriyalardakı product dizaynı ilə eyni olsun
+9. ödəmə şərtləri icon dəyişməlidir (map icounudur hazırda)
+10. whatsapp solda
+11. qeydiyyatda Ad, Soyad, Email, No
+12. category detail səhifəsində alt categories şəkilləri ilə
+13. category-dropdown-da sağ tərəf üçün iki alt kateqoriya seçmək imkanı olsun (şəkilli olan hissə)
+14. Filterlər-ə baxmaq
+15. topbar-da AZ RU dil seçimi
+16. Layihə-də light gallery
+17. product detail-də light gallery
+18. nömrəyə click edəndə zəng getsin
+19. müqayisə sadəcə görüntüləmək üçündü (seçilmişlər kimi)
+20. slide şəkil + link +
+21. çox satılanlar admindən +
+22. bəyənilənlər ürək əlavə edilənlərə görə hesablanır
+23. 1000 azn-ə qədər olanlar admindən
+24. Endirimdə olanlar +
+25. yeni məhsullar sistem təyin edir
+26. Partnyorlar-da logo(vacib), link(vacib olmasın) +
+27. sosial şəbəkələr-də twitter olmayacaq
+28. Partnyorlar bölümü(əlavə) - şəkil və text +
+29. Karyera imkanı-da cv file üçün yer əlavə etmək +
+30. Sağda rəqəmlər icon-a görə çox böyükdü. Kiçildilsin
+31. product detail-də paylaşım
+32. product detail-də birkart ay və ödənişi admindən
+33. product detail-də qiymət text olsun və kredit nağd qiymət görünməsi admindən seçilsin
+

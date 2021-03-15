@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- ........................................................banner........................................... -->
+    <section>
+            <div class="category-banner">
+                <img  src="{% static 'assets/images/pngtree-nordic-minimalist-furniture-banner-design-image_190039.jpeg'%}" alt="">
+            </div>
+        </section>
+
+    <!-- .....................................Service.......................................... -->
+    <section class="service-container" style="margin-top: 1rem">
+        <div>
+            <ul class="header_ul" id="header_ul">
+                <li>
+                    <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+                </li>
+                <li>
+                    <a title="Çatdırılma və qurasdirilma" href=""> &gt;Çatdırılma və qurasdirilma</a>
+                </li>
+            </ul>
+        </div>
+
+        {% for i in services %}
+
+        <div class="row service-header mb-2"
+            style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+            <div class="service_output_title"
+                style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
+                Çatdırılma və quraşdırılma</div>
+        </div>
+
+        <div class="all-service-terms">
+            <p class="terms">{{i.content}}<br></p>
+        </div>
+        {% endfor %}
+
+
+    </section>
+
+{% endblock %}

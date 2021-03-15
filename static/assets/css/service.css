@@ -1,0 +1,99 @@
+.category-banner img{
+    width: 100%;
+    height: 100%;
+  }
+
+.service-container{
+    margin: auto;
+}
+
+.service-container .header_ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    }
+
+.service-container .header_ul li{
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin-right: 5px;
+    }
+
+.service-container .header_ul li:last-of-type{
+    margin-right: 0px !important;
+    }
+
+.service-container .header_ul li a {
+    font-family: MavenPro-Regular;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.03px;
+    color: #40484e;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.service-terms-header{
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+        margin-bottom: auto;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.service-header .service_output_title{
+    float: left;
+    width: 100%;
+    font-family: MavenPro-Regular;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #40484e;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.service-container .header_ul li:last-of-type a{
+    font-family: MavenPro-Bold
+    }
+
+.all-service-terms .terms{
+    font-size: 14px;
+    font-family: MavenPro-Regular;
+}
+
+@media screen and (min-width: 1121px) {
+    .service-container{
+    width: 1120px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .service-container{
+      margin-left: 15px;
+      margin-right: 15px;
+    }    
+}
+
+@media screen and (max-width: 720px) {
+    .service-container .header_ul li a{
+        font-size: 11px;
+        white-space: nowrap;
+    }
+}

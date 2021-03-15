@@ -1,0 +1,160 @@
+.career-banner img{
+    width: 100%;
+    height: 200px;
+    /* object-fit: cover;
+    object-position: center; */
+  }
+
+.career-container{
+    margin: auto;
+}
+
+.career-container .header_ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    }
+
+.career-container .header_ul li{
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin-right: 5px;
+    }
+
+.career-container .header_ul li:last-of-type{
+    margin-right: 0px !important;
+    }
+
+.career-container .header_ul li a {
+    font-family: MavenPro-Regular;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.03px;
+    color: #40484e;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.career-header{
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+        margin-bottom: auto;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.career-header .career_output_title{
+    float: left;
+    width: 100%;
+    font-family: MavenPro-Regular;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #40484e;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.career-container .header_ul li:last-of-type a{
+    font-family: MavenPro-Bold
+    }
+
+.section-career .ul-career .career-question-answer{
+    list-style: none;
+}
+
+.career-questions{
+    font-size: 18px;
+    color: #333;
+    font-family: MavenPro-SemiBold;
+    border-bottom:1px solid #7777772e;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+    /* display: flex;
+    align-items: center; */
+    cursor: pointer;
+}
+
+.career-questions i{
+    transform: rotate(90deg);
+}
+
+.career-answers{
+    font-size: 16px;
+    color: #333;
+    font-family: MavenPro-Regular;
+    padding: 0px 20px;
+    margin: 0;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.form-input{
+    padding: 0px 20px;
+    display: flex;
+    margin-bottom: 20px;
+    font-family: MavenPro-SemiBold;
+}
+.form-input input, .form-input select, .form-input textarea{
+    width: 100%;
+    border: 1px solid #979797;
+    padding: 5px 20px;
+}
+
+.form-input-submit input{
+    width: 161px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #40484e;
+    display: inline-block;
+    font-family: MavenPro-SemiBold;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.28px;
+    text-align: center;
+    color: #40484e;
+    line-height: 45px;
+    text-decoration: none;
+    background: white;
+}
+.form-input-submit{
+    text-align: center;
+}
+
+@media screen and (min-width: 1121px) {
+    .career-container{
+    width: 1120px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .career-container{
+      margin-left: 15px;
+      margin-right: 15px;
+
+    }    
+}
+@media screen and (max-width: 720px) {
+    .career-container .header_ul li a{
+        font-size: 11px;
+        white-space: nowrap;
+    }
+}

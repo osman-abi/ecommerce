@@ -1,0 +1,760 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- ........................................................banner........................................... -->
+    <!-- <section>
+            <div class="category-banner">
+                <img class="all-images" src="{% static 'assets/images/3.jpeg'%}" alt="">
+            </div>
+        </section> -->
+
+
+
+
+
+    <!-- .....................................Product-detail.......................................... -->
+    <section class="product-detail-container" style="margin-top: 1rem">
+        <div>
+            <ul class="header_ul" id="header_ul">
+                <li>
+                    <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+                </li>
+                <li>
+                    <a title="Dolablar" href=""> &gt;Dolablar</a>
+                </li>
+                <li>
+                    <a title="Sadə dolab" href=""> &gt;Sadə dolab</a>
+                </li>
+                <li>
+                    <a title="5 qapılı sadə dolab" href=""> &gt;5 qapılı sadə dolab</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row product-detail-header mb-2"
+            style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+            <div class="product-detail_output_title"
+                style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
+                {{product.name}}
+            </div>
+        </div>
+
+        <div class="row m-0">
+
+            <div class="col-md-9 left-sidee p-0">
+                <div class="row carousel-holder" id="product-images">
+                    <div class="col-md-12">
+
+                        <div id="wowslider-container1">
+                            <div class="favorite-area-hearth d-product-favorite">
+                                <i class='far fa-heart icon-save' id='fav' data-product="{{ product.slug }}" data-action="add"
+                                 onclick="addToFavourite()"></i>
+                            </div>
+                            <div class="ws_images">
+                                <ul>
+                                    <li>
+                                        <a id=product1 href="javascript:void(0)" type="image">
+                                            <img src="{{product.thumbnail.url}}" id="wows1"
+                                            style="max-width:100%;max-height:100%;" />
+                                        </a>
+                                    </li>
+                                    {% for pr in product.images.all %}
+                                    <li>
+                                        <a id="product2" href="javascript:void(0)" type="image">
+                                            <img src="{{pr.image.url}}" id="wows2"
+                                                style="max-width:100%;max-height:100%;" />
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="ws_thumbs">
+                                <div style="top: 0px!important;">
+                                    {% for pr in product.images.all %}
+                                    <a href="#wows1">
+                                        <img src="{{pr.image.url}}" />
+                                    </a>
+
+                                    
+
+                                    {% endfor %}
+
+
+                                </div>
+                            </div>
+                            <div class="ws_shadow"></div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="product_bottom_detail_wrapper">
+                    <div class="row">
+                        <div class="col-md-12 sect-product-properties" id="content-right">
+                            <div class="panel panel-default" id="product-features">
+                                <div class="panel-body">
+                                    <ul class="featured-properteis six-properteis">
+                                        <li>
+                                            <div class="tooltip-feature">
+                                                <i style="font-size: 26px;color:#71767bd1" class="fas fa-truck"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <span class="">Pulsuz çatdırılma</span>
+                                        </li>
+                                        <li>
+                                            <div class="tooltip-feature">
+                                                <i style="font-size: 26px;color:#71767bd1" class="fas fa-check-circle"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <span class="">2 il zəmanət</span>
+                                        </li>
+                                        <li>
+                                            <div class="tooltip-feature">
+                                                <i style="font-size: 26px;color:#71767bd1" class="far fa-credit-card"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <span class="">Kredit</span>
+                                        </li>
+                                        <li>
+                                            <div class="tooltip-feature">
+                                                <i style="font-size: 26px;color:#71767bd1" class="fas fa-pencil-ruler"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <span class="">Ölçü xidməti və dizayn</span>
+                                        </li>
+                                        <li>
+                                            <div class="tooltip-feature">
+                                                <i style="font-size: 26px;color:#71767bd1" class="fas fa-credit-card"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <span class="">Kartla ödəmə</span>
+                                        </li>
+                                        <li>
+                                            <div class="tooltip-feature">
+                                                <i style="font-size: 26px;color:#71767bd1" class="fas fa-money-bill-wave"
+                                                    aria-hidden="true"></i>
+                                            </div>
+                                            <span class="">Onlayn ödəmə</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="product-features">
+                    <ul class="ul-product-features">
+                        <li class="product-features-question-answer">
+                            <div class="product-features-questions"> <i class="fa fa-caret-right mr-2"></i>Məhsulun
+                                xüsusiyyətləri </div>
+                            <p class="product-features-answers">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Harum laboriosam ipsam quibusdam animi quidem cum in necessitatibus asperiores
+                                fugiat exercitationem, esse illo recusandae reiciendis sunt excepturi voluptatem earum
+                                beatae quis!</p>
+                        </li>
+                        <li class="product-features-question-answer">
+                            <div class="product-features-questions"> <i class="fa fa-caret-right mr-2"></i> Çatdırılma
+                                və quraşdırılma</div>
+                            <p class="product-features-answers">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Harum laboriosam ipsam quibusdam animi quidem cum in necessitatibus asperiores
+                                fugiat exercitationem, esse illo recusandae reiciendis sunt excepturi voluptatem earum
+                                beatae quis!</p>
+                        </li>
+                        <li class="product-features-question-answer">
+                            <div class="product-features-questions"> <i class="fa fa-caret-right mr-2"></i> Ödəniş</div>
+                            <p class="product-features-answers">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Harum laboriosam ipsam quibusdam animi quidem cum in necessitatibus asperiores
+                                fugiat exercitationem, esse illo recusandae reiciendis sunt excepturi voluptatem earum
+                                beatae quis!</p>
+                        </li>
+                        <li class="product-features-question-answer">
+                            <div class="product-features-questions"> <i class="fa fa-caret-right mr-2"></i> Kredit
+                                şərtləri</div>
+                            <p class="product-features-answers">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Harum laboriosam ipsam quibusdam animi quidem cum in necessitatibus asperiores
+                                fugiat exercitationem, esse illo recusandae reiciendis sunt excepturi voluptatem earum
+                                beatae quis!</p>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-3 p-0 right-sidee" id="sidebar-right" style="position: relative;">
+                <div class="right-side-product-detail">
+                    <div class="mb-1 d-flex for-credit-product-detail">
+                        <div>Kreditlə:</div>
+                        <div class="ml-1 credit-price-product-detail align-items-center">2,865.00 ₼</div>
+                    </div>
+                    <div class="mb-1 d-flex cash-price-product-detail ">
+                        <div>Nağd:</div>
+                        <div class="cash-price-percent-product-detail">-{{product.sale}}%</div>
+                        <div class="ml-1 cash-pricee-product-detail">{{product.rest_price}} ₼</div>
+                    </div>
+                    <div style="font-family:MavenPro-Regular;font-size: 14px;border:1px solid #49bd68;padding:0px" class="d-flex">
+                        <div style="background:#49bd68;color:white;padding:0px 5px;">-40%</div>
+                        <div style="padding:0px 5px;" class="ml-1">Qənaət 70₼</div>
+                    </div>
+                    <div class="part-middle-product-detail">
+                        <div class="credit-duration-product-detail">0₼ 0% 12 ay</div>
+                        <div class="per-month-product-detail">Ayda 78 Azn</div>
+                    </div>
+                    <div class="position-relative bank-card">
+                        <img src="{% static 'assets/images/bir.png'%}" alt="">
+                        <div class="pay-with-card">18 ay 70 ₼-dan</div>
+                    </div>
+                     <div class="item-stock"><span class="value">Anbarda kifayət qədər var.</span></div>
+                                <div class="article_block">
+                                    <div class="muted">Art.: {{product.artikul}}</div>
+                                </div>
+                    <div data-toggle="modal" data-target="#oneClickModal" class="buy-one-click">
+                        <a href="javascript:void(0)">1 kliklə al</a>
+                    </div>
+                    <div class="add-basket-product-detail">
+
+                        <!-- :::::::::::::::::::::::::::::::: SEBETE ELAVE ETMEK :::::::::::::::::::::::::::: -->
+                        <span data-product="{{ product.slug }}" data-action="add" id='add' onclick="addToCart()">Səbətə at</span>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <form class="feedback col-md-9 col-12 p-0 mt-5 d-flex flex-wrap" action="" method="post">
+                <div class="col-sm-6 pl-0 pr-sm-3 pr-0 col-12 form-input">
+                    <input required="required" type="text" placeholder="Ad">
+                </div>
+                <div class="col-sm-6 pr-0 pl-sm-3 pl-0  col-12 form-input">
+                    <input required="required" type="email" placeholder="Email">
+                </div>
+                <div class="col-12 p-0 form-input">
+                    <textarea name="about_education" id="" cols="30" rows="4" placeholder="Rəyiniz"
+                        required="required"></textarea>
+                </div>
+                <div class="col-12 p-0 d-flex  justify-content-end align-items-center form-input-submit">
+                    <div class="d-flex star-submit">
+                        <input class="for-star-radio" name="rate" id="star-5" type="radio">
+                        <label class="fas fa-star r1" for="star-5" title="5"></label>
+                        <input class="for-star-radio" name="rate" id="star-4" type="radio">
+                        <label class="fas fa-star r2" for="star-4" title="4"></label>
+                        <input class="for-star-radio" name="rate" id="star-3" type="radio">
+                        <label class="fas fa-star r3" for="star-3" title="3"></label>
+                        <input class="for-star-radio" name="rate" id="star-2" type="radio">
+                        <label class="fas fa-star r4" for="star-2" title="2"></label>
+                        <input class="for-star-radio" name="rate" id="star-1" type="radio">
+                        <label class="fas fa-star r5" for="star-1" title="1"></label>
+                    </div>
+                    <input class="ml-1" type="submit" value="Göndər">
+                </div>
+            </form>
+
+            <!-- OXWAR MEHSULLAR -->
+
+
+            <div class="mt-5 w-100" id="carousel_item_same">
+                <div class="row w-100 mx-0 main_product_output mb-2">
+                    <!-- <div class="main_product_products_output_title">Oxşar məhsullar</div> -->
+                </div>
+                <div id="owl-carousel-item-same" class="owl-carousel-all owl-carousel owl-theme">
+
+                    <div class="item h-100">
+
+                       <div class="each-items-product-detail rt-item" product_slug="slug1" style="border:none">
+                    <div class="items-height" style="padding: 25px 30px 0px 30px ">
+                        <div style="padding-top: 100%" class="position-relative">
+                            <a class="position-absolute h-100 w-100" style="top:0" href="">
+                                <img class="all-images w-100 h-100 item-images" src="{% static 'assets/images/Untitled-1(5).jpeg'%}" alt="">
+                            </a>
+                            <div class="credit-duration">0₼ 0% 12 ay</div>
+                            <div class="items-svg position-absolute">
+                                <div title="Seçilmiş et" class="svg-filess">
+                                    <i style="color: white" class="fa fa-heart" aria-hidden="true"></i>
+                                </div>
+                                <div title="Müqayisə et" class="svg-filess">
+                                    <i style="color: white" class="fas fa-balance-scale-right" aria-hidden="true"></i>
+                                </div>
+                                <div data-toggle="modal" data-target="#oneClickModal" title="1 kliklə alma" class="svg-filess">
+                                    <i style="color: white" class="fas fa-hand-point-up" aria-hidden="true"></i>
+                                </div>
+                                <div data-toggle="modal" data-target="#quickViewModal" title="Sürətli baxış" class="svg-files-quick svg-filess">
+                                    <i style="color: white" class="fas fa-clock" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <div class="rating">
+                                <div class="votes_block nstar">
+                                    <div class="ratings">
+                                        <div class="inner_rating">
+                                            <div class="item-rating" title="1">
+                                                <i class="fas fa-star" aria-hidden="true"></i></div>
+                                            <div class="item-rating " title="2"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                            <div class="item-rating " title="3"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                            <div class="item-rating " title="4"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                            <div class="item-rating" title="5"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-title" style="height: 44px;">
+                                <a href="" class="dark_link option-font-bold font_sm"><span>Kondisioner AUX ASW-H09A4/FFR1 9000
+                                        BTU</span></a>
+                            </div>
+                            <div class="sa_block" data-fields="null" data-stores="[]" data-user-fields="null" style="height: 44px;">
+                                <div class="cost prices clearfix" style="height: 167px;">
+                                    <div class="icons-basket-wrapper offer_buy_block ce_cmp_hidden">
+                                        <div class="button_block">
+                                            <!--noindex-->
+                                            
+                                            <span title="Səbətə əlavə et" style="width: 38px;height:38px" class="insert-basket d-flex justify-content-center align-items-center btn-exlg to-cart btn btn-default transition_bg animate-load has-ripple">
+                                                <i style="color: #999" class="fas fa-shopping-cart" aria-hidden="true"></i></span>
+                                            <!--/noindex-->
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="price_matrix_wrapper ">
+                                        <div class="d-flex for-credit">
+                                            <div>Kreditle:</div>
+                                            <div class="ml-1 credit-price align-items-center">2865 ₼</div>
+                                        </div>
+                                        <div class="d-flex cash-price align-items-center">
+                                            <div>Nağd:</div>
+                                            <div class="cash-price-percent">-40%</div>
+                                            <div class="ml-1 cash-pricee">2115 ₼</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                    </div>
+
+                    <div class="item h-100">
+
+                        <div class="each-items-product-detail rt-item" product_slug="slug1" style="border:none">
+                     <div class="items-height" style="padding: 25px 30px 0px 30px ">
+                         <div style="padding-top: 100%" class="position-relative">
+                             <a class="position-absolute h-100 w-100" style="top:0" href="">
+                                 <img class="all-images w-100 h-100 item-images" src="{% static 'assets/images/Untitled-1(5).jpeg'%}" alt="">
+                             </a>
+                             <div class="credit-duration">0₼ 0% 12 ay</div>
+                             <div class="items-svg position-absolute">
+                                 <div title="Seçilmiş et" class="svg-filess">
+                                     <i style="color: white" class="fa fa-heart" aria-hidden="true"></i>
+                                 </div>
+                                 <div title="Müqayisə et" class="svg-filess">
+                                     <i style="color: white" class="fas fa-balance-scale-right" aria-hidden="true"></i>
+                                 </div>
+                                 <div data-toggle="modal" data-target="#oneClickModal" title="1 kliklə alma" class="svg-filess">
+                                     <i style="color: white" class="fas fa-hand-point-up" aria-hidden="true"></i>
+                                 </div>
+                                 <div data-toggle="modal" data-target="#quickViewModal" title="Sürətli baxış" class="svg-files-quick svg-filess">
+                                     <i style="color: white" class="fas fa-clock" aria-hidden="true"></i>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="item-info">
+                             <div class="rating">
+                                 <div class="votes_block nstar">
+                                     <div class="ratings">
+                                         <div class="inner_rating">
+                                             <div class="item-rating" title="1">
+                                                 <i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="2"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="3"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="4"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating" title="5"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="item-title" style="height: 44px;">
+                                 <a href="" class="dark_link option-font-bold font_sm"><span>Kondisioner AUX ASW-H09A4/FFR1 9000
+                                         BTU</span></a>
+                             </div>
+                             <div class="sa_block" data-fields="null" data-stores="[]" data-user-fields="null" style="height: 44px;">
+                                 <div class="cost prices clearfix" style="height: 167px;">
+                                     <div class="icons-basket-wrapper offer_buy_block ce_cmp_hidden">
+                                         <div class="button_block">
+                                             <!--noindex-->
+                                             <span title="Səbətə əlavə et" style="width: 38px;height:38px" class="insert-basket d-flex justify-content-center align-items-center btn-exlg to-cart btn btn-default transition_bg animate-load has-ripple">
+                                                 <i style="color: #999" class="fas fa-shopping-cart" aria-hidden="true"></i></span>
+                                             <!--/noindex-->
+                                         </div>
+                                     </div>
+                                     <div class="price_matrix_wrapper ">
+                                         <div class="d-flex for-credit">
+                                             <div>Kreditle:</div>
+                                             <div class="ml-1 credit-price align-items-center">2865 ₼</div>
+                                         </div>
+                                         <div class="d-flex cash-price align-items-center">
+                                             <div>Nağd:</div>
+                                             <div class="cash-price-percent">-40%</div>
+                                             <div class="ml-1 cash-pricee">2115 ₼</div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+ 
+                     </div>
+                 </div>
+                     </div>
+
+                     <div class="item h-100">
+
+                        <div class="each-items-product-detail rt-item" product_slug="slug1" style="border:none">
+                     <div class="items-height" style="padding: 25px 30px 0px 30px ">
+                         <div style="padding-top: 100%" class="position-relative">
+                             <a class="position-absolute h-100 w-100" style="top:0" href="">
+                                 <img class="all-images w-100 h-100 item-images" src="{% static 'assets/images/Untitled-1(5).jpeg'%}" alt="">
+                             </a>
+                             <div class="credit-duration">0₼ 0% 12 ay</div>
+                             <div class="items-svg position-absolute">
+                                 <div title="Seçilmiş et" class="svg-filess">
+                                     <i style="color: white" class="fa fa-heart" aria-hidden="true"></i>
+                                 </div>
+                                 <div title="Müqayisə et" class="svg-filess">
+                                     <i style="color: white" class="fas fa-balance-scale-right" aria-hidden="true"></i>
+                                 </div>
+                                 <div data-toggle="modal" data-target="#oneClickModal" title="1 kliklə alma" class="svg-filess">
+                                     <i style="color: white" class="fas fa-hand-point-up" aria-hidden="true"></i>
+                                 </div>
+                                 <div data-toggle="modal" data-target="#quickViewModal" title="Sürətli baxış" class="svg-files-quick svg-filess">
+                                     <i style="color: white" class="fas fa-clock" aria-hidden="true"></i>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="item-info">
+                             <div class="rating">
+                                 <div class="votes_block nstar">
+                                     <div class="ratings">
+                                         <div class="inner_rating">
+                                             <div class="item-rating" title="1">
+                                                 <i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="2"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="3"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="4"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating" title="5"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="item-title" style="height: 44px;">
+                                 <a href="" class="dark_link option-font-bold font_sm"><span>Kondisioner AUX ASW-H09A4/FFR1 9000
+                                         BTU</span></a>
+                             </div>
+                             <div class="sa_block" data-fields="null" data-stores="[]" data-user-fields="null" style="height: 44px;">
+                                 <div class="cost prices clearfix" style="height: 167px;">
+                                     <div class="icons-basket-wrapper offer_buy_block ce_cmp_hidden">
+                                         <div class="button_block">
+                                             <!--noindex-->
+                                             <span title="Səbətə əlavə et" style="width: 38px;height:38px" class="insert-basket d-flex justify-content-center align-items-center btn-exlg to-cart btn btn-default transition_bg animate-load has-ripple">
+                                                 <i style="color: #999" class="fas fa-shopping-cart" aria-hidden="true"></i></span>
+                                             <!--/noindex-->
+                                         </div>
+                                     </div>
+                                     <div class="price_matrix_wrapper ">
+                                         <div class="d-flex for-credit">
+                                             <div>Kreditle:</div>
+                                             <div class="ml-1 credit-price align-items-center">2865 ₼</div>
+                                         </div>
+                                         <div class="d-flex cash-price align-items-center">
+                                             <div>Nağd:</div>
+                                             <div class="cash-price-percent">-40%</div>
+                                             <div class="ml-1 cash-pricee">2115 ₼</div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+ 
+                     </div>
+                 </div>
+                     </div>
+
+
+            <div class="mt-5 w-100" id="carousel_item_same">
+                <div class="row w-100 mx-0 main_product_output mb-2">
+                    <div class="main_product_products_output_title">Oxşar məhsullar</div>
+                </div>
+                <div id="owl-carousel-item-same" class="owl-carousel-all owl-carousel owl-theme">
+
+                     <div class="item h-100">
+
+                        <div class="each-items-product-detail rt-item" product_slug="slug1" style="border:none">
+                     <div class="items-height" style="padding: 25px 30px 0px 30px ">
+                         <div style="padding-top: 100%" class="position-relative">
+                             <a class="position-absolute h-100 w-100" style="top:0" href="">
+                                 <img class="all-images w-100 h-100 item-images" src="{% static 'assets/images/Untitled-1(5).jpeg'%}" alt="">
+                             </a>
+                             <div class="credit-duration">0₼ 0% 12 ay</div>
+                             <div class="items-svg position-absolute">
+                                 <div title="Seçilmiş et" class="svg-filess">
+                                     <i style="color: white" class="fa fa-heart" aria-hidden="true"></i>
+                                 </div>
+                                 <div title="Müqayisə et" class="svg-filess">
+                                     <i style="color: white" class="fas fa-balance-scale-right" aria-hidden="true"></i>
+                                 </div>
+                                 <div data-toggle="modal" data-target="#oneClickModal" title="1 kliklə alma" class="svg-filess">
+                                     <i style="color: white" class="fas fa-hand-point-up" aria-hidden="true"></i>
+                                 </div>
+                                 <div data-toggle="modal" data-target="#quickViewModal" title="Sürətli baxış" class="svg-files-quick svg-filess">
+                                     <i style="color: white" class="fas fa-clock" aria-hidden="true"></i>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="item-info">
+                             <div class="rating">
+                                 <div class="votes_block nstar">
+                                     <div class="ratings">
+                                         <div class="inner_rating">
+                                             <div class="item-rating" title="1">
+                                                 <i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="2"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="3"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="4"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating" title="5"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="item-title" style="height: 44px;">
+                                 <a href="" class="dark_link option-font-bold font_sm"><span>Kondisioner AUX ASW-H09A4/FFR1 9000
+                                         BTU</span></a>
+                             </div>
+                             <div class="sa_block" data-fields="null" data-stores="[]" data-user-fields="null" style="height: 44px;">
+                                 <div class="cost prices clearfix" style="height: 167px;">
+                                     <div class="icons-basket-wrapper offer_buy_block ce_cmp_hidden">
+                                         <div class="button_block">
+                                             <!--noindex-->
+                                             <span title="Səbətə əlavə et" style="width: 38px;height:38px" class="insert-basket d-flex justify-content-center align-items-center btn-exlg to-cart btn btn-default transition_bg animate-load has-ripple">
+                                                 <i style="color: #999" class="fas fa-shopping-cart" aria-hidden="true"></i></span>
+                                             <!--/noindex-->
+                                         </div>
+                                     </div>
+                                     <div class="price_matrix_wrapper ">
+                                         <div class="d-flex for-credit">
+                                             <div>Kreditle:</div>
+                                             <div class="ml-1 credit-price align-items-center">2865 ₼</div>
+                                         </div>
+                                         <div class="d-flex cash-price align-items-center">
+                                             <div>Nağd:</div>
+                                             <div class="cash-price-percent">-40%</div>
+                                             <div class="ml-1 cash-pricee">2115 ₼</div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+ 
+                     </div>
+                 </div>
+                     </div>
+
+                     <div class="item h-100">
+
+                        <div class="each-items-product-detail rt-item" product_slug="slug1" style="border:none">
+                     <div class="items-height" style="padding: 25px 30px 0px 30px ">
+                         <div style="padding-top: 100%" class="position-relative">
+                             <a class="position-absolute h-100 w-100" style="top:0" href="">
+                                 <img class="all-images w-100 h-100 item-images" src="{% static 'assets/images/Untitled-1(5).jpeg'%}" alt="">
+                             </a>
+                             <div class="credit-duration">0₼ 0% 12 ay</div>
+                             <div class="items-svg position-absolute">
+                                 <div title="Seçilmiş et" class="svg-filess">
+                                     <i style="color: white" class="fa fa-heart" aria-hidden="true"></i>
+                                 </div>
+                                 <div title="Müqayisə et" class="svg-filess">
+                                     <i style="color: white" class="fas fa-balance-scale-right" aria-hidden="true"></i>
+                                 </div>
+                                 <div data-toggle="modal" data-target="#oneClickModal" title="1 kliklə alma" class="svg-filess">
+                                     <i style="color: white" class="fas fa-hand-point-up" aria-hidden="true"></i>
+                                 </div>
+                                 <div data-toggle="modal" data-target="#quickViewModal" title="Sürətli baxış" class="svg-files-quick svg-filess">
+                                     <i style="color: white" class="fas fa-clock" aria-hidden="true"></i>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="item-info">
+                             <div class="rating">
+                                 <div class="votes_block nstar">
+                                     <div class="ratings">
+                                         <div class="inner_rating">
+                                             <div class="item-rating" title="1">
+                                                 <i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="2"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="3"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="4"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating" title="5"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="item-title" style="height: 44px;">
+                                 <a href="" class="dark_link option-font-bold font_sm"><span>Kondisioner AUX ASW-H09A4/FFR1 9000
+                                         BTU</span></a>
+                             </div>
+                             <div class="sa_block" data-fields="null" data-stores="[]" data-user-fields="null" style="height: 44px;">
+                                 <div class="cost prices clearfix" style="height: 167px;">
+                                     <div class="icons-basket-wrapper offer_buy_block ce_cmp_hidden">
+                                         <div class="button_block">
+                                             <!--noindex-->
+                                             <span title="Səbətə əlavə et" style="width: 38px;height:38px" class="insert-basket d-flex justify-content-center align-items-center btn-exlg to-cart btn btn-default transition_bg animate-load has-ripple">
+                                                 <i style="color: #999" class="fas fa-shopping-cart" aria-hidden="true"></i></span>
+                                             <!--/noindex-->
+                                         </div>
+                                     </div>
+                                     <div class="price_matrix_wrapper ">
+                                         <div class="d-flex for-credit">
+                                             <div>Kreditle:</div>
+                                             <div class="ml-1 credit-price align-items-center">2865 ₼</div>
+                                         </div>
+                                         <div class="d-flex cash-price align-items-center">
+                                             <div>Nağd:</div>
+                                             <div class="cash-price-percent">-40%</div>
+                                             <div class="ml-1 cash-pricee">2115 ₼</div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+ 
+                     </div>
+                 </div>
+                     </div>
+
+                     <div class="item h-100">
+
+                        <div class="each-items-product-detail rt-item" product_slug="slug1" style="border:none">
+                     <div class="items-height" style="padding: 25px 30px 0px 30px ">
+                         <div style="padding-top: 100%" class="position-relative">
+                             <a class="position-absolute h-100 w-100" style="top:0" href="">
+                                 <img class="all-images w-100 h-100 item-images" src="{% static 'assets/images/Untitled-1(5).jpeg'%}" alt="">
+                             </a>
+                             <div class="credit-duration">0₼ 0% 12 ay</div>
+                             <div class="items-svg position-absolute">
+                                 <div title="Seçilmiş et" class="svg-filess">
+                                     <i style="color: white" class="fa fa-heart" aria-hidden="true"></i>
+                                 </div>
+                                 <div title="Müqayisə et" class="svg-filess">
+                                     <i style="color: white" class="fas fa-balance-scale-right" aria-hidden="true"></i>
+                                 </div>
+                                 <div data-toggle="modal" data-target="#oneClickModal" title="1 kliklə alma" class="svg-filess">
+                                     <i style="color: white" class="fas fa-hand-point-up" aria-hidden="true"></i>
+                                 </div>
+                                 <div data-toggle="modal" data-target="#quickViewModal" title="Sürətli baxış" class="svg-files-quick svg-filess">
+                                     <i style="color: white" class="fas fa-clock" aria-hidden="true"></i>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="item-info">
+                             <div class="rating">
+                                 <div class="votes_block nstar">
+                                     <div class="ratings">
+                                         <div class="inner_rating">
+                                             <div class="item-rating" title="1">
+                                                 <i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="2"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="3"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating " title="4"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                             <div class="item-rating" title="5"><i class="fas fa-star" aria-hidden="true"></i></div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="item-title" style="height: 44px;">
+                                 <a href="" class="dark_link option-font-bold font_sm"><span>Kondisioner AUX ASW-H09A4/FFR1 9000
+                                         BTU</span></a>
+                             </div>
+                             <div class="sa_block" data-fields="null" data-stores="[]" data-user-fields="null" style="height: 44px;">
+                                 <div class="cost prices clearfix" style="height: 167px;">
+                                     <div class="icons-basket-wrapper offer_buy_block ce_cmp_hidden">
+                                         <div class="button_block">
+                                             <!--noindex-->
+                                             <span title="Səbətə əlavə et" style="width: 38px;height:38px" class="insert-basket d-flex justify-content-center align-items-center btn-exlg to-cart btn btn-default transition_bg animate-load has-ripple">
+                                                 <i style="color: #999" class="fas fa-shopping-cart" aria-hidden="true"></i></span>
+                                             <!--/noindex-->
+                                         </div>
+                                     </div>
+                                     <div class="price_matrix_wrapper ">
+                                         <div class="d-flex for-credit">
+                                             <div>Kreditle:</div>
+                                             <div class="ml-1 credit-price align-items-center">2865 ₼</div>
+                                         </div>
+                                         <div class="d-flex cash-price align-items-center">
+                                             <div>Nağd:</div>
+                                             <div class="cash-price-percent">-40%</div>
+                                             <div class="ml-1 cash-pricee">2115 ₼</div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+ 
+                     </div>
+                 </div>
+                     </div>
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+            <!-- .................................modal one click buy........................................... -->
+    <div class=" modal fade" id="oneClickModal" tabindex="-1" role="dialog" aria-labelledby="oneClickLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-view" role="document">
+        <div class="modal-content">
+            <div class="row align-items-center text-center flex-column">
+
+                <div class="modal-body">
+                    <h3 class="one-click-header  text-center SignInOutFormstyle__Heading-w9z0ip-4 dUkJlM">
+                        1 kliklə al
+                    </h3>
+                </div>
+                <form method="POST" action="{% url 'buy_click' product.slug %}" id="form-join">
+                    {% csrf_token %}
+                    <div class="form-data"
+                        style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                        <input class="mb-2 joinj form-control" name="username" type="text" placeholder="Ad">
+                    </div>
+
+                    <div class="form-data"
+                        style="display: flex;flex-direction: column;justify-content: center;text-align: left;">
+                        <input class="mb-2 joinj form-control" name="phone_number" type="Tel" id=""
+                            placeholder="Nömrə">
+                    </div>
+
+
+
+                    <input type="submit" class="jbutton" value="Göndər">
+                </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </section>
+
+{% endblock %}

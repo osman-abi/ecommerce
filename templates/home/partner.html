@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- .....................................Campaign.......................................... -->
+    <section class="partner-container" style="margin-top: 1rem">
+        <div>
+            <ul class="header_ul" id="header_ul">
+                <li>
+                    <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+                </li>
+                <li>
+                    <a title="Partnyorlar" href=""> &gt;Partnyorlar</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row partner-header mb-2" style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+            <div class="partner_output_title"
+                style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
+                Partnyorlar</div>
+        </div>
+
+
+        <div class="row m-0 p-0">
+            <div class="col-12 d-flex p-0 partner-detail-info flex-wrap">
+                {% for partner in partners %}
+                    
+                
+            <div class="col-12 partner-detail-part p-0 mb-3 d-flex flex-wrap">
+            <div class="col-lg-6 col-12">
+                <div class="for-partner-img">
+                    <img class="w-100 h-100" src="{{partner.logo.url}}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="for-partner-text mt-3 mt-lg-0">
+                    <h1>{{partner.title}}</h1>
+                    <p class="m-0 p-0">{{partner.text}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        
+
+        {% endfor %}
+            
+        </div>
+            
+            
+        </div>
+
+
+
+
+    </section>
+
+{% endblock %}

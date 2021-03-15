@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- .....................................Service.......................................... -->
+    <section class="catalog-container" style="margin-top: 1rem">
+        <div>
+            <ul class="header_ul" id="header_ul">
+                <li>
+                    <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+                </li>
+                <li>
+                    <a title="Kataloq" href=""> &gt;Kataloq</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row catalog-header mb-2" style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+            <div class="catalog_output_title"
+                style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
+                Kataloq</div>
+        </div>
+
+        <section class="mt-3">
+            <div class="row catalog_output ">
+
+                {% for product in all_products %}
+                <ul class="catalog_ul">
+
+                    <li class="catalog_li_item">
+                        <a href="{% url 'product_detail' product.slug %}" class="catalog_output_cta">
+                            <img class="catalog_output_img lazy" src="{{ product.thumbnail.url }}"
+                                style="display: block;">
+                        </a>
+                    </li>
+                   
+                </ul>
+                {% endfor %}
+            </div>
+        </section>
+
+
+
+    </section>
+
+    <!-- ..................................pagination...................................... -->
+    <div class="mb-2 pagination_wrapper">
+        <ul class="pagination_ul">
+
+            <li class="active_page">
+                <a href="javascript:void(0);">
+                    1
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    2
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    3
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    4
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    5
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+{% endblock %}

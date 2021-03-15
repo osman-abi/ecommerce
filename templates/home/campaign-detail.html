@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- .....................................Question-Answers.......................................... -->
+    <section class="campaign-detail-container" style="margin-top: 1rem">
+    <div>
+        <ul class="header_ul" id="header_ul">
+            <li>
+                <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+            </li>
+            <li>
+                <a title="Kampaniyalar" href=""> &gt;Kampaniyalar</a>
+            </li>
+            <li>
+                    <a title="Heyata ferqli baxis" href=""> &gt;Heyata ferqli baxis</a>
+                </li>
+        </ul>
+    </div>
+
+    <!-- <div class="row campaign-header mb-2" style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+        <div class="campaign_output_title" style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">Kampaniyalar</div>
+    </div> -->
+
+    <div class="row">
+        <div class="col-12">
+            <div class="for-shadow-campaign-detail d-flex">
+            <div class="campaign-detail-images">
+                <img class="h-100 w-100" src="{% static 'assets/images/3.jpeg'%}" alt="">
+            </div>
+            <div class="campaign-details-text">
+            <div class="campaign-detail-name"><h1>Heyata ferqli baxis</h1></div>
+            <div class="campaign-detail-duration"><span>5 Yanvar - 31 Yanvar</span></div>
+            <div class="campaign-detail-content">Bəli, "Galaxy A51" modelinin 4-lü kamerası ilə bu mümkündür</div>
+            <div class="campaign-detail-footer">
+                    <div class="timer">
+                            <ul class="countdown-campaign-detail"
+                                data-count="01/24/2021 23:59:59">
+                                <li class="list-timer">
+                                    <strong class="days">00</strong>
+                                    <span class="days_text">GÜN</span>
+                                    <span class="seperator">:</span>
+                                </li>
+                                <li class="list-timer">
+                                    <strong class="hours">00</strong>
+                                    <span class="hours_text">SAAT</span>
+                                    <span class="seperator">:</span>
+                                </li>
+                                <li class="list-timer">
+                                    <strong class="minutes">00</strong>
+                                    <span class="minutes_text">DƏQİQƏ</span>
+                                    <span class="seperator">:</span>
+                                </li>
+                                <li>
+                                    <strong class="seconds">00</strong>
+                                    <span class="seconds_text">SANİYƏ</span>
+                                </li>
+                            </ul>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="long-text-campaign-detail">
+        <div class="long-text">
+                <p class="m-0 p-0">48 + 12 + 5 + 5 meqapiksel əsas kamera və 32 meqapiksel ön kamera ilə təchiz olunmuş&nbsp;Samsung&nbsp;Galaxy&nbsp;A51&nbsp;smartfonu 12 aylıq İLKİN ÖDƏNİŞSİZ və FAİZSİZ, ayda cəmi 53,25 AZN-ə İrşad Electronics-də.<br>Samsung Galaxy A51&nbsp;64 GB - 639 AZN<br>Kampaniya 31 yanvaradək qüvvədədir.<br>Onlayn sifariş üçün:<br>*0171<br>Whatsapp: 077 7770171<br>7179 SMS<br>Çatdırılma pulsuzdur.</p>
+        </div>
+    </div>
+
+            
+        </div>
+    </div>
+
+    
+
+</section>
+
+{% endblock %}

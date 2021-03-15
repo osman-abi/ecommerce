@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- ........................................................banner........................................... -->
+    <!-- <section>
+            <div class="category-banner">
+                <img class="all-images" src="{% static 'assets/images/3.jpeg'%}" alt="">
+            </div>
+        </section> -->
+
+    <!-- .....................................Project-detail.......................................... -->
+    <section class="project-detail-container" style="margin-top: 1rem">
+        <div>
+            <ul class="header_ul" id="header_ul">
+                <li>
+                    <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+                </li>
+                <li>
+                    <a title="" href="Layihələrimiz"> &gt;Layihələrimiz</a>
+                </li>
+                <li>
+                    <a title="Buzovna Bağ Evi" href=""> &gt;{{project.title}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row project-detail-header mb-2"
+            style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+            <div class="project-detail_output_title"
+                style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
+                Buzovna Bağ Evi</div>
+        </div>
+
+        <div class="project-detail-information-ehome">
+            <div class="details-text">{{project.content}}
+            </div>
+        </div>
+
+        {% for imag in project.image.all %}
+            
+        
+
+        <div class="mt-3">
+            <div class="row project-detail_output ">
+
+                <ul class="project-detail_ul">
+
+                    <li class="project-detail_li_item">
+                        <a href="" class="project-detail_output_cta">
+                            <img class="project-detail_output_img lazy" src="{{imag.image.url}}"
+                                style="display: block;">
+                        </a>
+                    </li>
+                    
+
+
+
+                </ul>
+            </div>
+        </div>
+{% endfor %}
+
+
+
+
+    </section>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- ........................................................banner........................................... -->
+    <section>
+            <div class="category-banner">
+                <img  src="{% static 'assets/images/pngtree-nordic-minimalist-furniture-banner-design-image_190039.jpeg'%}" alt="">
+            </div>
+        </section>
+
+    <!-- .....................................Guarantee.......................................... -->
+    <section class="credit-container" style="margin-top: 1rem">
+        <div>
+            <ul class="header_ul" id="header_ul">
+                <li>
+                    <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+                </li>
+                <li>
+                    <a title="Kredit şərtləri" href=""> &gt;Kredit şərtləri</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row credit-header mb-2"
+            style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+            <div class="credit_output_title"
+                style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
+                Kredit şərtləri</div>
+        </div>
+        {% for credit in credits %}
+            
+        
+
+        <div class="all-credit-terms">
+            <p class="terms">{{credit.content}}<br></p>
+        </div>
+
+        {% endfor %}
+
+
+
+    </section>
+{% endblock %}

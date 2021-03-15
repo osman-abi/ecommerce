@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <!-- ........................................................banner........................................... -->
+        <section>
+            <div class="category-banner">
+                <img src="{% static 'assets/images/pngtree-nordic-minimalist-furniture-banner-design-image_190039.jpeg'%}" alt="">
+            </div>
+        </section>
+
+    <!-- .....................................Question-Answers.......................................... -->
+    <section class="most-asked-container" style="margin-top: 1rem">
+    <div>
+        <ul class="header_ul" id="header_ul">
+            <li>
+                <a title="Əsas Səhifə" href="/">Əsas səhifə</a>
+            </li>
+            <li>
+                <a title="Tez-tez verilən suallar" href=""> &gt;Tez-tez verilən suallar</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="row most-asked-header mb-2" style="margin: 0;/*! display: block; */text-align: center;display: flex;">
+        <div class="most-asked_output_title" style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">Sual və cavab</div>
+    </div>
+    {% for q in questions %}
+        
+    
+    <div class="section-most-asked">
+        <ul class="ul-most-asked">
+            <li class="most-asked-question-answer">
+                <div class="most-asked-questions"> <i class="fa fa-caret-right mr-2"></i> {{q.title}}?</div>
+                <p class="most-asked-answers">{{q.content}}</p>
+            </li>
+        </ul>
+    </div>
+    {% endfor %}
+
+</section>
+
+{% endblock %}

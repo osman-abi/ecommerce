@@ -1,0 +1,117 @@
+/* .category-banner img{ */
+    /* width: 100%; */
+    /* height: 200px; */
+    /* object-fit: cover; */
+    /* object-position: center; */
+  /* }  */
+
+.location-container{
+    margin: auto;
+}
+
+.location-container .header_ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    }
+
+.location-container .header_ul li{
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin-right: 5px;
+    }
+
+.location-container .header_ul li:last-of-type{
+    margin-right: 0px !important;
+    }
+
+.location-container .header_ul li a {
+    font-family: MavenPro-Regular;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.03px;
+    color: #40484e;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.location-header{
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+        margin-bottom: auto;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.location-header .location_output_title{
+    float: left;
+    width: 100%;
+    font-family: MavenPro-Regular;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #40484e;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.location-container .header_ul li:last-of-type a{
+    font-family: MavenPro-Bold
+    }
+
+.location-ehome-map iframe{
+    width: 100%;
+}
+
+.branch-location{
+    font-family: MavenPro-SemiBold;
+}
+
+.location-information-ehome{
+    margin-bottom: 20px;
+}
+
+.location-information-ehome div{
+    font-family: MavenPro-Regular;
+    font-size: 14px;
+}
+/* .all-payment-terms .terms{
+    font-size: 14px;
+    font-family: MavenPro-Regular;
+} */
+
+@media screen and (min-width: 1121px) {
+    .location-container{
+    width: 1120px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .location-container{
+      margin-left: 15px;
+      margin-right: 15px;
+    }    
+}
+
+@media screen and (max-width: 720px) {
+    .location-container .header_ul li a{
+        font-size: 11px;
+        white-space: nowrap;
+    }
+}

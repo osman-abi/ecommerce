@@ -1,0 +1,167 @@
+.blog-container{
+    margin: auto;
+}
+
+.blog-container .header_ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    }
+
+.blog-container .header_ul li{
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin-right: 5px;
+    }
+
+.blog-container .header_ul li:last-of-type{
+    margin-right: 0px !important;
+    }
+
+.blog-container .header_ul li a {
+    font-family: MavenPro-Regular;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.03px;
+    color: #40484e;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.blog-header{
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+        margin-bottom: auto;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.blog-header .blog_output_title{
+    float: left;
+    width: 100%;
+    font-family: MavenPro-Regular;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #40484e;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.blog-container .header_ul li:last-of-type a{
+    font-family: MavenPro-Bold
+    }
+
+    .blog-images{
+        width: 40%;
+    }
+    
+    .blog-text{
+        width: 60%;
+        padding: 20px 20px 0px 20px;
+        position: relative;
+    }
+    .blog-name {
+        margin-bottom: 5px;
+    }
+    .blog-name h1 {
+        font-family: MavenPro-SemiBold;
+        font-size: 32px;
+    }
+    
+    .blog-content {
+        font-family: MavenPro-Regular;
+        font-size: 15px;
+    }
+    
+    .blog-footer{
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
+    .for-shadow-blog{
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.176);
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+    
+    .blog-images img{
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .blog-detailly a {
+        font-family: MavenPro-SemiBold;
+        font-size: 14px;
+        color: #333 !important;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    .blog-detailly {
+        display: flex;
+        justify-content: end;
+    }
+
+@media screen and (min-width: 1121px) {
+    .blog-container{
+    width: 1120px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .blog-container{
+      margin-left: 15px;
+      margin-right: 15px;
+
+    }    
+}
+
+/* @media screen and (max-width: 1079px) {
+    .blog-name h1{
+        font-size: 22px;
+    }
+} */
+
+
+@media screen and (max-width: 1020px) {
+    .for-shadow-blog{
+        display: block !important;
+    }
+    .blog-images {
+        width: 100%;
+    }
+    .blog-images img{
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .blog-text{
+        padding: 20px;
+        width: 100%;
+    }
+    .blog-footer{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .blog-container .header_ul li a{
+        font-size: 11px;
+        white-space: nowrap;
+    }
+}
