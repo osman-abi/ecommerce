@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'assets/css/most-asked.css'%}">
+{% endblock %}
+
 {% block content %}
         <!-- ........................................................banner........................................... -->
         <section>
@@ -39,4 +44,8 @@
 
 </section>
 
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'assets/js/most-asked.js'%}"></script>
 {% endblock %}

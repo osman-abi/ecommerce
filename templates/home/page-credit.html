@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'assets/css/page-credit.css'%}">
+{% endblock %}
+
 {% block content %}
     <!-- ........................................................banner........................................... -->
     <section>
@@ -40,4 +45,8 @@
 
 
     </section>
+{% endblock %}
+
+{% block js %}
+
 {% endblock %}

@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'assets/css/catalog.css'%}">
+{% block content %}
+    
 {% block content %}
     <!-- .....................................Service.......................................... -->
     <section class="catalog-container" style="margin-top: 1rem">
@@ -74,5 +79,9 @@
 
         </ul>
     </div>
+
+{% endblock %}
+
+{% block js %}
 
 {% endblock %}

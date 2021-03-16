@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'assets/css/blog-detail.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/blog.css'%}">
+{% endblock %}`
+
+
 {% block content %}
     <!-- .....................................Campaign.......................................... -->
     <section class="blog-container" style="margin-top: 1rem">
@@ -126,4 +132,8 @@
 
 
     </section>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'assets/js/jquery.countdown.min.js' %}"></script>
 {% endblock %}

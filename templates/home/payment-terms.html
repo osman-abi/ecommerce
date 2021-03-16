@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'assets/css/payment-terms.css'%}">
+{% endblock %}
+
 {% block content %}
         <!-- ........................................................banner........................................... -->
         <section>
@@ -36,5 +41,9 @@
     {% endfor %}
 
 </section>
+
+{% endblock %}
+
+{% block js %}
 
 {% endblock %}

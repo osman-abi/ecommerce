@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'assets/css/campaign.css'%}">
+{% endblock %}
+
 {% block content %}
     <!-- .....................................Campaign.......................................... -->
     <section class="campaign-container" style="margin-top: 1rem">
@@ -182,4 +187,9 @@
             
         </ul>
     </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'assets/js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'assets/js/campaign.js' %}"></script>
 {% endblock %}

@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'assets/css/career.css'%}">
+{% endblock %}
+
 {% block content %}
     <!-- ........................................................banner........................................... -->
     <section>
@@ -120,4 +126,8 @@
 
     </section>
 
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'assets/js/career.js' %}"></script>
 {% endblock %}

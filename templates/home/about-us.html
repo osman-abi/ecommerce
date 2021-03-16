@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'assets/css/about-us.css'%}">
+{% endblock %}
+
 {% block content %}
     <!-- ........................................................banner........................................... -->
     <section>
@@ -41,4 +45,8 @@
 
 
     </section>
+{% endblock %}
+
+{% block js %}
+    
 {% endblock %}

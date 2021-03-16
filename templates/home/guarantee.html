@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'assets/css/guarantee.css'%}">
+{% endblock %}
+
 {% block content %}
 
     <!-- ........................................................banner........................................... -->
@@ -41,5 +46,9 @@
 
 
     </section>
+
+{% endblock %}
+
+{% block js %}
 
 {% endblock %}

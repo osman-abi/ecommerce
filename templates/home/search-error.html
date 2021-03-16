@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'assets/css/category.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/project-detail.css'%}">
+{% endblock %}
+
 {% block content %}
 
 <section>
@@ -21,4 +28,14 @@
 </section>
 
 
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-ui-touch.js' %}"></script>
+    <script src="{% static 'assets/js/wow_slider.js' %}"></script>
+    <script src="{% static 'assets/js/wow_script.js' %}"></script>
+    <script src="{% static 'assets/js/fancybox.js' %}"></script>
+    <script src="{% static 'assets/js/category.js' %}"></script>
+    <script src="{% static 'assets/js/device.js' %}"></script>
 {% endblock %}
