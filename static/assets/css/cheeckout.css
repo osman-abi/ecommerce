@@ -1,0 +1,171 @@
+@media screen and (min-width: 1121px) {
+    .check-out .card{
+        width: 1120px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .check-out .card{
+          margin-left: 15px !important; 
+          margin-right: 15px !important;
+    }
+}
+
+.check-out .card{
+    margin: auto;
+}
+
+
+.check-out .card-top {
+    padding: 0.7rem 5rem
+}
+
+.check-out .card-top a {
+    float: left;
+    margin-top: 0.7rem
+}
+
+.check-out #logo {
+    font-family: 'Dancing Script';
+    font-weight: bold;
+    font-size: 1.6rem
+}
+
+.check-out .card-body {
+    padding: 3rem 3rem 3rem 3rem;
+}
+
+@media(max-width:768px) {
+    .check-out .card-body {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .check-out .card-top {
+        padding: 0.7rem 1rem
+    }
+}
+
+.check-out .row {
+    margin: 0
+}
+
+.check-out .upper {
+    padding: 1rem 0;
+    justify-content: space-evenly
+}
+
+.check-out #three {
+    border-radius: 1rem;
+    width: 22px;
+    height: 22px;
+    margin-right: 3px;
+    border: 1px solid blue;
+    text-align: center;
+    display: inline-block
+}
+
+.check-out #payment {
+    margin: 0;
+    color: blue
+}
+
+.check-out .icons {
+    margin-left: auto
+}
+
+.check-out form span {
+    color: rgb(179, 179, 179)
+}
+
+.check-out form {
+    padding: 2vh 0
+}
+
+.check-out input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247)
+}
+
+.check-out input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+.check-out .header {
+    font-size: 1.5rem
+}
+
+.check-out .left {
+    background-color: #ffffff;
+    padding: 2vh
+}
+
+.check-out .left img {
+    width: 2rem
+}
+
+.check-out .left .col-md-4:first-child,.check-out .left .col-6:first-child {
+    padding-left: 0
+}
+.check-out .left .col-md-4:last-child,.check-out .left .col-6 :last-child{
+    padding-right: 0
+}
+
+.check-out .right .item {
+    padding: 0.3rem 0
+}
+
+.check-out .right {
+    background-color: #ffffff;
+    padding: 2vh
+}
+
+.check-out .col-8 {
+    padding: 0 1vh
+}
+
+.check-out .lower {
+    line-height: 2
+}
+
+.check-out .btn {
+    background-color: #49bd68;
+    border-color: #49bd68;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin: 4vh 0 1.5vh 0;
+    padding: 1.5vh;
+    border-radius: 0
+}
+
+.check-out .btn:focus {
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    -webkit-user-select: none;
+    transition: none
+}
+
+.check-out .btn:hover {
+    color: white
+}
+
+.check-out a {
+    color: black
+}
+
+.check-out a:hover {
+    color: black;
+    text-decoration: none
+}
+
+.check-out input[type=checkbox] {
+    width: unset;
+    margin-bottom: unset
+}

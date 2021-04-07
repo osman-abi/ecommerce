@@ -20,4 +20,7 @@ class Partner(models.Model):
         return str(self.name)
 
 
-
+class Banner(models.Model):
+    left_cover = models.ImageField(upload_to='uploads/banners/', verbose_name='reklam baneri')
+    right_cover = models.ImageField(
+        upload_to='uploads/banners/', verbose_name='reklam baneri')

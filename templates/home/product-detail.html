@@ -40,9 +40,9 @@
 
         <div class="row product-detail-header mb-2"
             style="margin: 0;/*! display: block; */text-align: center;display: flex;">
-            <div class="product-detail_output_title"
+            <div class="product-detail_output_title" id="productName" data-product="{{product.slug}}"
                 style="text-align: center;align-items: center;display: flex;justify-content: center;justify-items: center;">
-                {{product.name}}
+                {{product.name}} -> {{product.slug}}
             </div>
         </div>
 
@@ -770,4 +770,5 @@
     <script src="{% static 'assets/js/wow_script.js' %}"></script>
     <script src="{% static 'assets/js/jquery.fancybox.js' %}"></script>
     <script src="{% static 'assets/js/product-detail.js' %}"></script>
+    <script src="{% static 'assets/js/cart.js'%}"></script>
 {% endblock %}

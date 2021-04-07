@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'projects',
     'about',
     'favourite',
+    'compare',
 
 
     # third-party
@@ -164,7 +165,10 @@ TEMPLATES = [
                 'products.context_processors.category',
                 'orders.context_processors.order',
                 'favourite.context_processors.favourite',
-                'slide.context_processors.slide'
+                'slide.context_processors.slide',
+                'blog.context_processors.blog',
+                'partners.context_processors.partner',
+                'compare.context_processors.compare'
 
             ],
         },
@@ -181,7 +185,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ehome',
-        'USER': 'postgres',
+        'USER': 'osman',
         'PASSWORD': 'postman20031997',
         'HOST': '127.0.0.1',
         'PORT': '5432',

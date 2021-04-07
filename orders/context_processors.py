@@ -7,7 +7,8 @@ def order(request):
         customer = request.user.customer
         order_model = Order.objects.get(customer=customer)
         items = order_model.orderitem_set.all()
-        cart_items = order_model.get_cart_items #cart counting
+        cart_items = order_model.get_cart_items
+        cart_total = order_model.get_cart_total #cart counting
 
     else:
         try:
@@ -27,8 +28,10 @@ def order(request):
                 cart_items += cart[i]['quantity']
 
                 item = {
-                    'product':product,
-                    'quantity': cart[i]['quantity']
+                    'items':product,
+                    'quantity': cart[i]['quantity'],
+                    'common_total': cart_total,
+                    'get_total':total
                 }
 
                 items.append(item)
@@ -36,6 +39,7 @@ def order(request):
                 print ('BLANK CART')
     return{
         'cart_items_count': cart_items,
-        'items':items,
-        'order':order_model
+        'products':items,
+        'order': order_model,
+        'cart_total':cart_total
     }

@@ -1,4 +1,15 @@
 $(document).ready(function () {
+    var data = []
+    var product = $('#productName')[0].dataset.product
+    data.push(product)    
+    sessionStorage.setItem('products',data)
+    var arrAy = sessionStorage.getItem('products')
+    for (const i of arrAy) {
+        if (i != product) {
+            data[data.length] = product
+            localStorage.setItem('products',data)
+        }
+    }
     $('#owl-carousel-item-same').owlCarousel({
         loop: false,
         margin: 9,

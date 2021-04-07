@@ -1,9 +1,11 @@
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
 from django.core import serializers
 from django.views.generic import ListView, DetailView
 from django.db.models import Q
-from .models import Product, BestSellerProducts, SaleProducts, Category
+from .models import Product, BestSellerProducts, SaleProducts, Category, Color, Brend
+ 
 from django.shortcuts import get_object_or_404
 from smtplib import SMTP
 import json
@@ -18,14 +20,18 @@ class ProductListView(ListView):
 
 def product_detail(request,slug):
     product = get_object_or_404(Product, slug=slug)
+    category = Product.objects.filter(category_id=product.category.id)
     
     shopping_cart = json.loads(request.COOKIES.get('cart'))
     cowsay.milk(shopping_cart)
 
-    return render(request, 'home/product-detail.html', {'product':product})
+
+    return render(request, 'home/product-detail.html', {'product':product,'categories':category})
 
 
-        
+    
+
+
 def filter_data(request):
     data_to_display = Product.objects.all()
     data = serializers.serialize('json', data_to_display)
@@ -54,7 +60,7 @@ def search_product(request):
     search_query = request.GET.get('q')
     print(search_query)
 
-    products = Product.objects.all().filter(
+    products = Product.objects.filter(
         Q(name__icontains=str(search_query))
     ).distinct()
 
@@ -69,8 +75,17 @@ def search_product(request):
 """ CATEGORY LIST """
 
 def category_product(request, id, slug):
-    product = Product.objects.filter(category_id = id)
-    return render(request, 'home/category.html', {'category_products':product})
+    product = Product.objects.filter(category_id=id)
+    color = Color.objects.all()
+    page = request.GET.get('page', 1)
+    paginator = Paginator(product, 1)
+    try:
+        pages = paginator.page(page)
+    except PageNotAnInteger:
+        pages = paginator.page(1)
+    except EmptyPage:
+        pages = paginator.page(paginator.num_pages)
+    return render(request, 'home/category.html', {'category_products':product,'colors':color,'category_count':product.count(), 'pages':pages})
 
 """  BUY ONE CLICK """
 

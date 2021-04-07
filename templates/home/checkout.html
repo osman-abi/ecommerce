@@ -1,0 +1,96 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'assets/css/cheeckout.css'%}">
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+
+
+
+<section class="check-out container">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="left border">
+                        <div class="row"> <span class="header">Payment</span>
+                            <div class="icons"> <img src="https://img.icons8.com/color/48/000000/visa.png" /> 
+                                <!-- <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" />  -->
+                                    <!-- <img src="https://img.icons8.com/color/48/000000/maestro.png" />  -->
+                                </div>
+                        </div>
+                        <form method="POST" action="{% url 'order_save' %}"> 
+                            {% csrf_token %} 
+                            <span>Ad:</span> <input name="firstname" placeholder="adinizi daxil edin">
+                            <span>Soyad:</span> <input name="lastname" placeholder="0125 6780 4567 9909">
+                                <span> mobil nomre </span><input name="phone" placeholder="Linda Williams">
+                                <span> Çatdırılacaq ünvan: </span><input name="shipping_address" />
+                                <span>mebleg</span><input name="amount" value="{{order.get_cart_total}}"/>
+                            <button style="font-family:MavenPro-Bold;font-size:14px" type="submit" class="btn">Sifarisi tamamla</button>
+                            <!-- <div class="row">
+                                <div class="col-md-4 col-6"><span>Expiry date:</span> <input placeholder="YY/MM"> </div>
+                                <div class="col-md-4 col-6"><span>CVV:</span> <input id="cvv"> </div>
+
+                            </div>  -->
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="right border">
+                        <div class="header">Order Summary</div>
+                        <p>{{order.get_cart_items}} eded</p>
+                        {% for ord in orders %}
+                        <div class="row item">
+                            <div class="col-4 align-self-center">
+                                <img class="h-100 w-100 img-fluid"
+                                    src="{{ord.items.thumbnail.url}}">
+                                </div>
+                            <div class="col-8">
+                                <div class="row"><b>{{ord.items.price}}</b></div>
+                                <!-- <div class="row text-muted">{{ord.items.feat}}</div> -->
+                                <div class="row">Miqdar: {{ord.quantity}}</div>
+                            </div>
+                        </div>
+                            
+                        {% endfor %}
+                        
+                        <hr>
+                        <!-- <div class="row lower">
+                            <div class="col text-left">Subtotal</div>
+                            <div class="col text-right">$ 46.98</div>
+                        </div>
+                        <div class="row lower">
+                            <div class="col text-left">Delivery</div>
+                            <div class="col text-right">Free</div>
+                        </div> -->
+                        <div class="row lower">
+                            <div class="col text-left"><b>Cemi</b></div>
+                            <div class="col text-right"><b>{{order.get_cart_total}} AZN</b></div>
+                        </div>
+                        <div class="row lower">
+                        
+                        </div> 
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+
+{% block js %}
+
+{% endblock %}

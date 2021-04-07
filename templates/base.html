@@ -156,20 +156,22 @@
                     <div class="middle_header_inner_column middle_header_inner_shortcuts_wrapper">
                         <div class="shortcuts_list customer-group">
                             <div class="shortcut_column membership_wrapper_notlogin headerLoginRegister"
-                                style="display: block;">
-                                <a data-toggle="modal" data-target="#exampleModal" style="text-decoration: none"
-                                    rel="nofollow" href="" class="shortcut_title d-flex align-items-center">
-                                    <i style="color: #71767b;font-size: 22px;margin-right: 8px;" class="fa fa-user"></i>
-                                    {% if user.is_authenticated %}
-                                    <a href="{% url 'logout' %}">
-                                    Cixis
-                                    </a>
-                                    {% else %}
-                                    <span class="shortcut_text">Giris</span>
-                                    {% endif %}
-                                </a>
-
-                            </div>
+                            style="display: block;">
+                            {% if user.is_authenticated %}
+                            <a  style="text-decoration: none" rel="nofollow" href="{% url 'logout' %}"
+                                class="shortcut_title d-flex align-items-center">
+                                <i style="color: #71767b;font-size: 22px;margin-right: 8px;" class="fa fa-user"></i>
+                                <span class="shortcut_text">Cixis</span>
+                            </a>
+                            {% else %}
+                            <a data-toggle="modal" data-target="#exampleModal" style="text-decoration: none"
+                                rel="nofollow" href="" class="shortcut_title d-flex align-items-center">
+                                <i style="color: #71767b;font-size: 22px;margin-right: 8px;" class="fa fa-user"></i>                                    
+                                <span class="shortcut_text">Giris</span>
+                            </a>
+                                
+                            {% endif %}
+                            </div
                             <div class="shortcut_column my_favorites_wrapper my-favorites">
                                 <a style="text-decoration: none" rel="nofollow" href="javascript:void(0)"
                                     class="shortcut_title my-favorites-container favorite-icon-header d-flex align-items-center">
@@ -210,16 +212,16 @@
                         {% recursetree category %}
                         <li class="main_category_list">
                             <a href="  {% url 'category_detail' node.id  node.slug %} " 
-                            class="main_category_name" title="Mətbəx mebeli">{{ node.name }} || {{ node.image }} </a>
+                            class="main_category_name" title="Mətbəx mebeli">{{ node.name }} </a>
                             {% if not node.is_leaf_node %}
                             <div class="main_category_inner">
                                 <div class="main_category_inner_container">
                                     <div class="subcategories_column two_column_list none_border">
-                                        <ul class="children">
-                                            
+                                        <ul class="subcategories_list">
+                                            <li>
                                                 <a href=" {% url 'category_detail' node.id  node.slug %} " class="subcategory_name"
-                                                    title="Modern mətbəx mebelləri"> {{ children }} </a>
-                                            
+                                                    title="Modern mətbəx mebelləri"> {{ children}} </a>
+                                            </li>
                                            
                                         </ul>
                                     </div>
@@ -599,6 +601,9 @@
 
 
     <section class="right-side-line">
+        
+            
+        
         <div class="line-side line-side-closee d-flex">
             <div class="nav flex-column icon-items nav-pills" id="v-pills-tab" role="tablist"
                 aria-orientation="vertical">
@@ -616,7 +621,7 @@
                 <a class="nav-link right-side-opener" id="v-pills-compare-tab" data-toggle="pill"
                     href="#v-pills-compare" role="tab" aria-controls="v-pills-compare" aria-selected="false">
                     <i style="color: white" class="fas fa-balance-scale-right" aria-hidden="true"></i>
-                    <span class="parent-count-item"><span class="count-itemm">0</span></span>
+                    <span class="parent-count-item"><span class="count-itemm">{{compare_items_count}}</span></span>
                 </a>
                 <a data-toggle="modal" data-target="#callModal" class="nav-link" id="v-pills-call-tab"
                     data-toggle="pill" href="javascript:void(0)" role="tab" aria-controls="v-pills-call"
@@ -646,59 +651,62 @@
                     <!-- <div class="inside-right-side-item-when-empty">
                         <div class="when-empty">Səbətdə məhsul yoxdur</div>
                     </div> -->
+
                     <div class="inside-right-side-item-all">
                         <div class="inside-right-side-item">
                             <div class="d-flex">
+                                {% for item in products %}
                                 <div class="right-side-item-info">
                                     <div class="d-flex align-items-center">
                                         <div class="basket-item-img">
                                             <a href=""><img class="w-100 h-100"
-                                                    src="{% static 'assets/images/Untitled-1(3).jpeg'%}" alt=""></a>
+                                                    src="{{item.items.thumbnail.url}}" alt=""></a>
 
                                         </div>
                                         <div style="margin-left:10px;">
                                             <div class="item-name-right-side-item">
-                                                <a href="">5 qapılı sadə dolab</a>
+                                                <a href="">{{item.items.name}}</a>
                                             </div>
-                                            <div class="price-right-side-item">755 ₼</div>
+                                            <div class="price-right-side-item">{{item.get_total}} ₼</div>
                                             <div class="item-minus-plus">
-                                                <span><i class="fa fa-minus " aria-hidden="true"></i></span>
-                                                <span>1</span>
-                                                <span><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                                <span><i class="fa fa-minus" data-action="minus" data-product="{{item.items.slug}}" onclick="updateCart()" aria-hidden="true" id='add'></i></span>
+                                                <span>{{item.quantity}}</span>
+                                                <span><i class="fa fa-plus" data-action="plus" data-product="{{item.items.slug}}" onclick="addToCart()" aria-hidden="true" id='add'></i></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex flex-column align-items-center">
+                                    <!-- <div class="d-flex flex-column align-items-center">
                                         <div class="price-right-side-item">755 ₼</div>
                                         <div class="price-right-side-item-sale">Nağd alışda: 650 ₼</div>
-                                    </div>
-
-                                    <div class="exit-svg-right-side-item">
+                                    </div> -->
+                                    
+                                    <div class="exit-svg-right-side-item" data-action="remove" id='remove' data-product="{{item.items.slug}}" onclick="removeFromCart()">
                                         <svg xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="13"
-                                            viewBox="0 0 16 16">
-                                            <defs>
-                                                <path id="a"
-                                                    d="M7 5.763L1.494.256A.875.875 0 1 0 .256 1.494L5.763 7 .256 12.506a.875.875 0 1 0 1.238 1.238L7 8.237l5.506 5.507a.875.875 0 1 0 1.238-1.238L8.237 7l5.507-5.506A.875.875 0 1 0 12.506.256L7 5.763z">
-                                                </path>
-                                            </defs>
-                                            <use fill="#999999" fill-rule="nonzero" stroke="#FFF"
-                                                transform="translate(1 1)" xlink:href="#a">
-                                            </use>
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"  width="13" height="13"
+                                        viewBox="0 0 16 16">
+                                        <defs>
+                                            <path id="a"
+                                            d="M7 5.763L1.494.256A.875.875 0 1 0 .256 1.494L5.763 7 .256 12.506a.875.875 0 1 0 1.238 1.238L7 8.237l5.506 5.507a.875.875 0 1 0 1.238-1.238L8.237 7l5.507-5.506A.875.875 0 1 0 12.506.256L7 5.763z">
+                                        </path>
+                                        </defs>
+                                        <use fill="#999999" fill-rule="nonzero" stroke="#FFF"
+                                        transform="translate(1 1)" xlink:href="#a">
+                                        </use>
                                         </svg>
                                     </div>
-
+                        
                                 </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="bottom-right-side-item">
-                        <div class="summary-price">Cəmi: 2265 ₼</div>
+                    {% endfor %}
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="bottom-right-side-item">
+                        <div class="summary-price">Cəmi: {{cart_total}} ₼</div>
                         <div class="book-items">
-                            <a href="">Sifariş et</a>
+                            <a href="{% url 'checkout' %}">Sifariş et</a>
                         </div>
                     </div>
                 </div>
@@ -724,50 +732,52 @@
                         <div class="when-empty">Seçilmişlərdə məhsul yoxdur</div>
                     </div> -->
                     <div class="inside-right-side-item-all">
+                        {% for item in favourite_items %}
                         <div class="inside-right-side-item">
                             <div class="d-flex">
                                 <div class="right-side-item-info">
                                     <div class="d-flex align-items-center">
                                         <div class="basket-item-img">
                                             <a href=""><img class="w-100 h-100"
-                                                    src="{% static 'assets/images/Untitled-1(3).jpeg'%}" alt=""></a>
+                                                    src="{{item.product.thumbnail.url}}" alt=""></a>
 
                                         </div>
                                         <div style="margin-left:10px;">
                                             <div class="item-name-right-side-item">
-                                                <a href="">5 qapılı sadə dolab</a>
+                                                    
+                                                <a href="">{{item.product.name}}</a>
                                             </div>
-                                            <div class="price-right-side-item">755 ₼</div>
-                                            <div class="price-right-side-item-sale">Nağd alışda: 650 ₼</div>
+                                            <div class="price-right-side-item">{{item.product.price}} ₼</div>
                                         </div>
                                     </div>
                                     <div class="div-shopping-card">
-                                        <i style="color: #999" class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                        <i style="color: #999" data-product="{{ item.product.slug }}" data-action="add" id='add' onclick="addToCart()" class="fas fa-shopping-cart" aria-hidden="true"></i>
                                     </div>
-
+                                    
                                     <div class="exit-svg-right-side-item">
                                         <svg xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="13"
-                                            viewBox="0 0 16 16">
-                                            <defs>
-                                                <path id="a"
-                                                    d="M7 5.763L1.494.256A.875.875 0 1 0 .256 1.494L5.763 7 .256 12.506a.875.875 0 1 0 1.238 1.238L7 8.237l5.506 5.507a.875.875 0 1 0 1.238-1.238L8.237 7l5.507-5.506A.875.875 0 1 0 12.506.256L7 5.763z">
-                                                </path>
-                                            </defs>
-                                            <use fill="#999999" fill-rule="nonzero" stroke="#FFF"
-                                                transform="translate(1 1)" xlink:href="#a">
-                                            </use>
-                                        </svg>
-                                    </div>
-
-                                </div>
-
-
-                            </div>
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="13"
+                                        viewBox="0 0 16 16">
+                                        <defs>
+                                            <path id="a"
+                                            d="M7 5.763L1.494.256A.875.875 0 1 0 .256 1.494L5.763 7 .256 12.506a.875.875 0 1 0 1.238 1.238L7 8.237l5.506 5.507a.875.875 0 1 0 1.238-1.238L8.237 7l5.507-5.506A.875.875 0 1 0 12.506.256L7 5.763z">
+                                        </path>
+                                    </defs>
+                                    <use fill="#999999" fill-rule="nonzero" stroke="#FFF"
+                                    transform="translate(1 1)" xlink:href="#a">
+                                </use>
+                            </svg>
                         </div>
-
+                        
                     </div>
-
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+        {% endfor %}
 
 
                 </div>
@@ -789,6 +799,50 @@
                             </svg>
                         </div>
                     </div>
+                    <div class="inside-right-side-item-all">
+                        {% for item in compare_items %}
+                    <div class="inside-right-side-item">
+                        <div class="d-flex">
+                            <div class="right-side-item-info">
+                                <div class="d-flex align-items-center">
+                                    <div class="basket-item-img">
+                                        <a href=""><img class="w-100 h-100" src="{{item.product.thumbnail.url}}" alt=""></a>
+                    
+                                    </div>
+                                    <div style="margin-left:10px;">
+                                        <div class="item-name-right-side-item">
+                    
+                                            <a href="">{{item.product.name}}</a>
+                                        </div>
+                                        <div class="price-right-side-item">{{item.product.price}} ₼</div>
+                                    </div>
+                                </div>
+                                <div class="div-shopping-card">
+                                    <i style="color: #999" data-product="{{ item.product.slug }}" data-action="add" id='add'
+                                        onclick="addToCart()" class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                </div>
+                    
+                                <div class="exit-svg-right-side-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13"
+                                        height="13" viewBox="0 0 16 16">
+                                        <defs>
+                                            <path id="a"
+                                                d="M7 5.763L1.494.256A.875.875 0 1 0 .256 1.494L5.763 7 .256 12.506a.875.875 0 1 0 1.238 1.238L7 8.237l5.506 5.507a.875.875 0 1 0 1.238-1.238L8.237 7l5.507-5.506A.875.875 0 1 0 12.506.256L7 5.763z">
+                                            </path>
+                                        </defs>
+                                        <use fill="#999999" fill-rule="nonzero" stroke="#FFF" transform="translate(1 1)" xlink:href="#a">
+                                        </use>
+                                    </svg>
+                                </div>
+                    
+                            </div>
+                    
+                    
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </div>
+
                     <div class="inside-right-side-item-when-empty">
                         <div class="when-empty">Məhsulların müqayisəsində məhsul yoxdur</div>
                     </div>
@@ -1059,22 +1113,28 @@
             document.cookie = 'favourite=' + JSON.stringify(favourite) + ';domain=;path=/'
         }
 
+        var compare = JSON.parse(getCookie('compare'))
+            if (compare == null) {
+                compare = {}
+                document.cookie = 'compare=' + JSON.stringify(compare) + ';domain=;path=/'
+            }
 
     </script>
 
-    <script src="{% static 'assets/js/jquery-3.5.1.min.js'%}"></script>
-    <script src="{% static 'assets/js/bootstrap.bundle.js'%}"></script>
-    <script src="{% static 'assets/js/bootstrap.bundle.min.js'%}"></script>
-    <script src="{% static 'assets/js/bootstrap.js'%}"></script>
-    <script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
-    <script src="{% static 'assets/js/owl.carousel.min.js'%}"></script>
-    <script src="{% static 'assets/js/main.js'%}"></script>
-    <script src="{% static 'assets/js/right-line-side.js'%}"></script>
+<script src="{% static 'assets/js/jquery-3.5.1.min.js'%}"></script>
+<script src="{% static 'assets/js/bootstrap.bundle.js'%}"></script>
+<script src="{% static 'assets/js/bootstrap.bundle.min.js'%}"></script>
+<script src="{% static 'assets/js/bootstrap.js'%}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+<script src="{% static 'assets/js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'assets/js/main.js'%}"></script>
+<script src="{% static 'assets/js/right-line-side.js'%}"></script>
+<script src="{% static 'assets/js/cart.js'%}"></script>
+
 
     {% block js %}
     
     {% endblock %}
-
     <!-- <script src="{% static 'assets/js/most-asked.js'%}"></script>
     <script src="{% static 'assets/js/cart.js'%}"></script>
     <script src="{% static 'assets/js/campaign-detail.js' %}"></script>

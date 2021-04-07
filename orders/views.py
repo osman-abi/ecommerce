@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
-from .models import Order, OrderItem
+from .models import Order, OrderItem,ApprovedOrder
 from products.models import Product
 import json
 from .utils import cookie_cart
@@ -53,7 +53,6 @@ import cowsay
 
 def add_to_cart(request):
 	data = json.loads(request.body)
-
 	productSlug = data['productSlug']
 	action = data['action']	
 	customer = request.user.customer
@@ -64,30 +63,66 @@ def add_to_cart(request):
 	order_item.quantity += 1
 	
 	order_item.save()
-	cowsay.milk(order_item.quantity)
 
+	return JsonResponse('item was added', safe=False)
 	
 
 	
-	
-
-	# if action == 'add':
+	# if action == 'plus':
 	# 	order_item.quantity = (order_item.quantity + 1)
 
-	# elif action == 'remove':
+	# elif action == 'minus':
 	# 	order_item.quantity = (order_item.quantity - 1)
+	
+	# elif action == 'remove':
+	# 	order_item.delete()
+    # # 	order_
 
 	# order_item.save()
 
 	# if order_item.quantity <= 0:
 	# 	order_item.delete()
+	
 
-	return JsonResponse('item was added', safe=False)
+
+
+
+
+
+def update_cart(request):
+	data = json.loads(request.body)
+	print('-->',data)
+	productSlug = data['productSlug']
+	action = data['action']
+	customer = request.user.customer
+	product = Product.objects.get(slug=productSlug)
+
+	order = Order.objects.get(customer=customer)
+	order_item, created = OrderItem.objects.get_or_create(
+		order=order, items=product)
+	if action == 'plus':
+		order_item.quantity = (order_item.quantity + 1)
+
+	if action == 'minus':
+		order_item.quantity = (order_item.quantity - 1)
+
+	order_item.save()
+	
+	
+	if order_item.quantity <= 0:
+    		order_item.delete()
+	if action == 'remove':
+			order_item.delete()
+
+	return JsonResponse('item was updated', safe=False)
+
 
 """ CHECKOUT """
-"""
+
 def checkout(request):
-	order_item = Order.orderitem_set.all()
+	customer = request.user.customer
+	order = Order.objects.get(customer=customer)
+	order_item = order.orderitem_set.all()
 	if request.method == 'POST':
 		first_name = request.POST.get('first_name')
 		last_name = request.POST.get('last_name')
@@ -100,6 +135,24 @@ def checkout(request):
 									shipping_address=shipping_address)
 		order.save()
 		return redirect('/')
-	return render(request,'home/checkout.html',{'orders':order_item})
+	return render(request,'home/checkout.html',{'orders':order_item,'order':order})
 		
-"""
+def save_order(request):
+	if request.method == 'POST':
+		customer = request.user.customer
+		firstname = request.POST.get("firstname", "")
+		lastname = request.POST.get("lastname", "")
+		phone = request.POST.get("phone", "")
+		items = OrderItem.objects.all()
+		shipping_address = request.POST.get("shipping_address", "")
+		amount = request.POST.get("amount", "")
+		approve = ApprovedOrder.objects.create(order_user=customer,firstname=firstname, lastname=lastname, phone=phone, shipping_address=shipping_address, amount=amount)
+		for i in items:
+			approve.items.add(i)
+		approve.save()
+		order = Order.objects.get(customer=customer)
+		order_item = OrderItem.objects.get(order=order)
+		order_item.delete()
+		return redirect('/')
+	return render(request, 'home/checkout.html')
+		

@@ -88,13 +88,13 @@ class OrderItem(models.Model):
 
 
     def __str__(self):
-        return f"{self.quantity} ədəd"
+        return self.items.name
 
 
 
     @property
     def get_total(self):
-        total = self.price * self.quantity
+        total = self.items.price * self.quantity
         return total
 
 
@@ -123,7 +123,7 @@ class ApprovedOrder(models.Model):
     phone = models.CharField(max_length=30, blank=False, verbose_name='Əlaqə nömrəsi')
     taksit = models.CharField(max_length=30, blank=True, null=True, verbose_name='Taksit')
     items = models.ManyToManyField('OrderItem', blank=True, verbose_name='Məhsullar')
-    ordered_date = models.DateTimeField(verbose_name='Sifarişin edilmə tarixi')
+    ordered_date = models.DateTimeField(auto_now=True,verbose_name='Sifarişin edilmə tarixi')
     shipping_address = models.TextField(max_length=5000, blank=True, null=True, verbose_name='Çatdırılacaq ünvan')
     amount = models.CharField(max_length=100, blank=True, null=True, verbose_name='Məbləğ')
     status = models.CharField(choices=STATUS, default='approved', max_length=40, blank=True)

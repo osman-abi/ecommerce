@@ -133,7 +133,7 @@ class Product(models.Model):
     artikul = models.CharField(
         max_length=250, blank=True, verbose_name='Məhsulun artikulu')
     category = models.ForeignKey(
-        Category, blank=False, on_delete=models.CASCADE, verbose_name='Məhsulun kateqoriyası')
+        Category, blank=False, on_delete=models.CASCADE,null=True, verbose_name='Məhsulun kateqoriyası')
     thumbnail = models.ImageField(
         upload_to='products/thumbnails/', blank=False, verbose_name='Məhsulun əsas şəkli')
 
@@ -159,6 +159,9 @@ class Product(models.Model):
         default=0, blank=True, verbose_name='Mehsulun endirimli qiymeti')
     slug = models.SlugField(unique=True, max_length=300,
                             blank=True, editable=False)
+    genislik = models.IntegerField()
+    yukseklik = models.IntegerField()
+    derinlik = models.IntegerField()
     publish_date = models.DateTimeField(
         auto_now=True, verbose_name='Əlavə edilmə tarixi')
     in_stock = models.BooleanField(verbose_name='Anbarda?', default=False)
